@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 
-function Row ({title, fetchUrl}) {
 
-    const [movies, setMovies] = useState([]);
+
+
+const baseUrl = 'http://image.tmdb.org/t/p/original/';
+
+
+
+function Row({ title, fetchUrl }) {
+
+    const [movies, setMovies] = useState([]);   //tu pusta tablica czy null????????
 
     // useEffect( () => {
 
@@ -16,14 +23,22 @@ function Row ({title, fetchUrl}) {
     // },[]);
 
 
-  //  czy to ma być funkcja asynchroniczna????
 
 
+    // async function getData() {
+    //     await fetch(fetchUrl)
+    //         .then((res) => res.json())
+    //         .then((data) => setMovies(data.results));
+    // }
+
+    // useEffect(() => {
+
+    //     getData();
+
+    // }, []);
 
 
-
-  
-        useEffect( () => {
+    useEffect(() => {
 
         async function getData() {
 
@@ -46,9 +61,12 @@ function Row ({title, fetchUrl}) {
                 })
         }
         getData();
-        
 
-    }, []);   //to ma zostać???
+
+    }, [fetchUrl]);   //to ma zostać w środku???
+
+    //CZY funkcja asynchroniczna ma być poza useEffectem???????????????????????????
+
 
 
     console.log(movies);
@@ -57,10 +75,16 @@ function Row ({title, fetchUrl}) {
         <div className="row-container">
             <h2>{title}</h2>
             <div className="row-posters">
-                {movies.map(item => {
-                    <img src={item.poster_path} alt={item.title} />
-                })}
-                
+                {
+                    movies && movies.map(item => {
+                       return <img 
+                       className="row-poster"
+                       key={item.id} 
+                       src={`${baseUrl}${item.poster_path}`} 
+                       alt={item.title} 
+                       />
+                    })
+                }
             </div>
         </div>
     );

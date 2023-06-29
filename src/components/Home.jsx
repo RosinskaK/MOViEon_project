@@ -44,6 +44,8 @@ function Home() {
 
     // }, []);
 
+ //   console.log(movie);
+
 
     // return (
     //         <>
