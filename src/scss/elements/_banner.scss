@@ -1,7 +1,54 @@
-// .banner {
+.banner {
+    object-fit: contain;
+    height: 480px;
+}
 
-// }
+.banner-contents {
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
 
-// .banner-contents {
+.banner-title {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 0.3rem;
+}
 
-// }
+.banner-description {
+    width: 45rem;
+    line-height: 1.3rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    max-width: 360px;
+    height: 80px;
+
+}
+
+.banner-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 0.9rem;
+    font-weight: 700;
+    //border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.6rem;
+    background-color: rgba(18, 18, 37, 0.5);
+    padding-bottom: 0.6rem;
+    border-radius: 30px;
+    transition: all 0.7s;
+    //border: 2px solid transparent;
+
+    &:hover {
+        
+        // border-radius: 30px;
+        // border-width: 2px;
+        // border-style: solid;
+        background: linear-gradient(233.25deg,#5b4df6,#ff493b); //1;
+    }
+}

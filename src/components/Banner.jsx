@@ -33,12 +33,31 @@ function Banner() {
 
     console.log(movie);
 
+    // ograniczanie ilości teksu w div
+    function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+    }
+
+
   return (
-    <header className='banner'> {/* background img */}
+    <header className='banner'
+        style={{
+            backgroundSize: 'cover',
+            backgroundImage: `url(
+                'http://image.tmdb.org/t/p/original/${movie?.backdrop_path}'
+            )`,
+            backgroundPosition: 'center center',
+        }}
+    > 
         <div className='banner-contents'>
-            {/* title */}
-            {/* div -> dwa buttony */}
-            {/* description */}
+            <h1 className='banner-title'>{movie?.title || movie?.original_title}</h1>
+            <div className='banner-btns'>
+                <button className='banner-btn'>Oglądaj</button>
+                <button className='banner-btn'>Dodaj do ulubionych</button>
+            </div>
+
+            <h1 className='banner-description'>{truncate(movie?.overview, 150)}</h1>
+            
         </div>
     </header>
   );

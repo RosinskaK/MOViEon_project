@@ -4,6 +4,18 @@
     padding: 1rem 2rem;
 }
 
+.nav-logo {
+
+    font-size: 2.2rem;
+    font-style: italic;
+
+    span {
+        background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 .nav-left-icons {
     display: flex;
 }
