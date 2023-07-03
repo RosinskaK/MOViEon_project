@@ -7,36 +7,9 @@ const baseUrl = 'http://image.tmdb.org/t/p/original/';
 
 
 
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow }) {
 
-    const [movies, setMovies] = useState([]);   //tu pusta tablica czy null????????
-
-    // useEffect( () => {
-
-    //     async function fetchData() {
-    //         const request = await (fetchUrl);
-    //         console.log(request.results);
-    //         return request;
-    //     }
-    //     fetchData();
-
-    // },[]);
-
-
-
-
-    // async function getData() {
-    //     await fetch(fetchUrl)
-    //         .then((res) => res.json())
-    //         .then((data) => setMovies(data.results));
-    // }
-
-    // useEffect(() => {
-
-    //     getData();
-
-    // }, []);
-
+    const [movies, setMovies] = useState([]);   
 
     useEffect(() => {
 
@@ -62,11 +35,7 @@ function Row({ title, fetchUrl }) {
         }
         getData();
 
-
-    }, [fetchUrl]);   //to ma zostać w środku???
-
-    //CZY funkcja asynchroniczna ma być poza useEffectem???????????????????????????
-
+    }, [fetchUrl]);
 
 
     console.log(movies);
@@ -78,9 +47,9 @@ function Row({ title, fetchUrl }) {
                 {
                     movies && movies.map(item => {
                        return <img 
-                       className="row-poster"
+                       className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
                        key={item.id} 
-                       src={`${baseUrl}${item.poster_path}`} 
+                       src={`${baseUrl}${isLargeRow ? item.poster_path : item.backdrop_path}`} 
                        alt={item.title} 
                        />
                     })
@@ -91,3 +60,29 @@ function Row({ title, fetchUrl }) {
 }
 
 export default Row;
+
+
+
+
+    // useEffect( () => {
+
+    //     async function fetchData() {
+    //         const request = await (fetchUrl);
+    //         console.log(request.results);
+    //         return request;
+    //     }
+    //     fetchData();
+
+    // },[]);
+
+    // async function getData() {
+    //     await fetch(fetchUrl)
+    //         .then((res) => res.json())
+    //         .then((data) => setMovies(data.results));
+    // }
+
+    // useEffect(() => {
+
+    //     getData();
+
+    // }, []);
