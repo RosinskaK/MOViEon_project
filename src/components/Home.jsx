@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 //import { useNavigate } from "react-router-dom";
 
 import BarNavigation from './BarNavigation';
+import Banner from "./Banner";
 import Row from './Row';
 
 
 //const API_KEY = 'c7dc4c7edb4a2f3d428d569c08985e07';
-
 
 //https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07
 //https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07
@@ -20,8 +20,31 @@ import Row from './Row';
 function Home() {
 
 
-    // const [movie, setMovies] = useState(null);
+    return (
+        <div className="home-main-container">
+            <BarNavigation />
+            <Banner />
+            <Row title='Najpopularniejsze filmy' 
+            fetchUrl={'https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'} 
+            isLargeRow />
+            <Row title='Najwyżej oceniane filmy' 
+            fetchUrl='https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+            <Row title='Nadchodzące premiery filmowe' 
+            fetchUrl='https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+            <Row title='Najpopularniejsze w TV' 
+            fetchUrl='https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+            <Row title='Najwyżej oceniane w TV' 
+            fetchUrl='https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+        </div>
+    );
+}
 
+export default Home;
+
+
+
+
+    // const [movie, setMovies] = useState(null);
 
     // useEffect( () => {
     //     fetch('https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07', {
@@ -46,7 +69,6 @@ function Home() {
 
  //   console.log(movie);
 
-
     // return (
     //         <>
     //             {
@@ -57,27 +79,3 @@ function Home() {
     //             }
     //         </>
     //     )
-
-
-    return (
-        <div className="home-main-container">
-
-            
-            <BarNavigation />
-            <h1>Hello again!!!</h1>
-            <Row title='Najpopularniejsze filmy' 
-            fetchUrl={'https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'} 
-            isLargeRow />
-            <Row title='Najwyżej oceniane filmy' 
-            fetchUrl='https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
-            <Row title='Nadchodzące premiery filmowe' 
-            fetchUrl='https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
-            <Row title='Najpopularniejsze w TV' 
-            fetchUrl='https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
-            <Row title='Najwyżej oceniane w TV' 
-            fetchUrl='https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
-        </div>
-    );
-}
-
-export default Home;
