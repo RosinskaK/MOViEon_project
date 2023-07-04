@@ -25,16 +25,16 @@ function Home() {
             <BarNavigation />
             <Banner />
             <Row title='Najpopularniejsze filmy' 
-            fetchUrl={'https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'} 
-            isLargeRow />
+                    fetchUrl={'https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'} 
+                    isLargeRow />
             <Row title='Najwyżej oceniane filmy' 
-            fetchUrl='https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+                    fetchUrl='https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
             <Row title='Nadchodzące premiery filmowe' 
-            fetchUrl='https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+                    fetchUrl='https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
             <Row title='Najpopularniejsze w TV' 
-            fetchUrl='https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+                    fetchUrl='https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
             <Row title='Najwyżej oceniane w TV' 
-            fetchUrl='https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
+                    fetchUrl='https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07'/>
         </div>
     );
 }

@@ -8,8 +8,9 @@ function BarNavigation () {
                 <button className="nav-left-icon">Strona głowna</button>
                 <button className="nav-left-icon">Moja lista</button>
             </div>
-            <div>
-                <button>Wyszukiwarka</button>
+            <div className="nav-right-icons">
+                <button className="nav-btn-search">Wyszukiwarka</button>
+                <h3 className="nav-hello">Hello!</h3>
             </div>
         </div>
     );

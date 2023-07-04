@@ -33,7 +33,7 @@ function Banner() {
 
     console.log(movie);
 
-    // ograniczanie ilości teksu w div
+    // ograniczanie ilości teksu w div do 150 znaków - patrz na dole
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
@@ -55,10 +55,11 @@ function Banner() {
                 <button className='banner-btn'>Oglądaj</button>
                 <button className='banner-btn'>Dodaj do ulubionych</button>
             </div>
-
             <h1 className='banner-description'>{truncate(movie?.overview, 150)}</h1>
-            
         </div>
+        
+        <div className='banner-fadeBottom'></div>
+        
     </header>
   );
 }

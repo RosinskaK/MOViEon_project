@@ -1,7 +1,14 @@
 .nav-main-container {
+    position: fixed;  //
+    top: 0;           // dzięki temu nachodzi na banner
+    width: 100vw;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.7rem 1.5rem;
+
+    height: 70px;
+    background-color: $main-app-color;
+    z-index: 1;
 }
 
 .nav-logo {
@@ -11,6 +18,7 @@
 
     span {
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -22,4 +30,16 @@
 
 .nav-left-icon {
     margin-left: 1rem;
+}
+
+.nav-right-icons {
+    display: flex;
+}
+
+.nav-btn-search {
+    margin-right: 1rem;
+}
+
+.nav-hello {
+    margin-right: 1rem;
 }
