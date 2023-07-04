@@ -7,8 +7,14 @@
     padding: 0.7rem 1.5rem;
 
     height: 70px;
-    background-color: $main-app-color;
     z-index: 1;
+
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.nav-black {
+    background-color: $main-app-color;
 }
 
 .nav-logo {
