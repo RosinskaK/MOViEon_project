@@ -21,11 +21,13 @@ function BarNavigation () {
         <div className={`nav-main-container ${show && 'nav-black'}`}>
             <div className="nav-left-icons">
                 <h1 className="nav-logo">MOV<span>i</span>E<span>on</span></h1>
-                <button className="nav-left-icon">Strona głowna</button>
-                <button className="nav-left-icon">Moja lista</button>
+                <button className="nav-left-icon nav-btns">Strona głowna</button>
+                <button className="nav-left-icon nav-btns">Moja lista</button>
             </div>
             <div className="nav-right-icons">
-                <button className="nav-btn-search">Wyszukiwarka</button>
+                <button className="nav-btn-search nav-btns">
+                
+                    </button>
                 <h3 className="nav-hello">Hello!</h3>
             </div>
         </div>
