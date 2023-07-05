@@ -19,7 +19,6 @@ import Row from './Row';
 
 function Home() {
 
-
     return (
         <div className="home-main-container">
             <BarNavigation />
