@@ -1,24 +1,71 @@
 
 .footer {
-    height: 300px;
+    height: 250px;
     width: 100vw;
 
     display: flex;
-    
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
 }
 
 .footer-logos {
-    //display: flex;
+    margin-left: 2em;
+    padding-top: 3em;
 }
 
 .footer-logo-TMDB {
     fill: url(#MyGradient);
+    -webkit-fill: url(#MyGradient);
+
+    margin-bottom: 20px;
 }
 
-// .footer-copyright {
+.footer-logo-movieon {
+    margin-right: 1rem;
 
-// }
+    font-size: 1.7rem;
+    font-style: italic;
 
-// .footer-socialIcons {
+    span {
+        background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
-// }
+.footer-descriptions {
+    padding-top: 6em;
+    font-size: 0.8rem;
+    width: 80vw;
+    text-align: center;
+}
+
+
+.footer-socialIcons {
+    //color: #9527b1;
+    width: 140px;
+    //padding-left: 10px;
+    padding-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+
+    span {
+        font-weight: 700;
+        background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+

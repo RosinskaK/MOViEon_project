@@ -51,38 +51,4 @@ function Home() {
 
 export default Home;
 
-// const [movie, setMovies] = useState(null);
 
-// useEffect( () => {
-//     fetch('https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07', {
-//         method: 'GET',
-//     })
-//         .then(res => {
-//             if (res.ok) {
-//                 return res.json();
-//             } else {
-//                 throw new Error(res.message);
-//             }
-//         })
-//         .then(data => {
-//             console.log(data);
-//             setMovies(data);
-//         })
-//         .catch(error => {
-//             console.error(error);
-//         })
-
-// }, []);
-
-//   console.log(movie);
-
-// return (
-//         <>
-//             {
-//                 !data && <h1>Ładowanie danych...</h1>
-//             }
-//             {
-//                 data && <h1>{data}</h1>
-//             }
-//         </>
-//     )
