@@ -28,7 +28,7 @@ function Footer() {
                 <IconTikTok />
             </div>
         </div>
-        <div className='footer-copyright'>Created by &copy;<span>Kasia Rosińska</span></div>
+        <div className='footer-copyright'>Created by <span>&copy;Kasia Rosińska</span></div>
     </div>
   );
 }

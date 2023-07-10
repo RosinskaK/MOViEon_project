@@ -43,13 +43,13 @@ function Row({ title, fetchUrl, isLargeRow }) {
     return (
         <div className="row-container">
             <h2>{title}</h2>
-            <div className="row-posters">
+            <div className="row-posters scroll-moz">
                 {
                     movies && movies.map(item => {
                        return <img 
                        className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
                        key={item.id} 
-                       src={`${baseUrl}${isLargeRow ? item.poster_path : item.backdrop_path}`} 
+                       src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
                        alt={item.title} 
                        />
                     })
