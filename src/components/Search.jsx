@@ -9,7 +9,7 @@ function Search() {
     return (
     <div>
         <BarNavigation />
-        <div style={{backgroundColor:'pink', height:'2000px', paddingTop:'100px'}}>Search!!!!!!!!!!!!!!!!!!!</div>
+        <div style={{backgroundColor:'orange', height:'2000px', paddingTop:'100px'}}>Search!!!!!!!!!!!!!!!!!!!</div>
     </div>
   );
 }
