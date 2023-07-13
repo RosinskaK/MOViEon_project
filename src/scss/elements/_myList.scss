@@ -1,0 +1,23 @@
+.mylist {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mylist-lettering {
+    width: 600px;
+    text-align: center;
+    padding-top: 30px;
+    h2 {
+        padding-bottom: 30px;
+        font-weight: 400;
+    }
+}
+
+.mylist-image {
+    width: 600px;
+    border-radius: 30px;
+}
