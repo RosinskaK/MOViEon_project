@@ -9,7 +9,7 @@ function Banner() {
 
         async function getData() {
 
-            await fetch(('https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07'), {
+            await fetch((`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`), {
                 method: 'GET',
             })
                 .then(res => {

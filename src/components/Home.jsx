@@ -7,14 +7,6 @@ import Banner from "./Banner";
 import Row from "./Row";
 import Footer from "./Footer";
 
-//const API_KEY = 'c7dc4c7edb4a2f3d428d569c08985e07';
-
-//https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07
-//https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07
-//https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07
-
-//https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07
-//https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07
 
 function Home() {
   return (
@@ -24,25 +16,29 @@ function Home() {
       <Row
         title="Najpopularniejsze filmy"
         fetchUrl={
-          "https://api.themoviedb.org/3/movie/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07"
+          `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`
         }
         isLargeRow
       />
       <Row
+        title="Najnowsze trendy filmowe"
+        fetchUrl={`https://api.themoviedb.org/3/trending/all/day?api_key=${import.meta.env.VITE_API_KEY}`}
+      />
+      <Row
         title="Najwyżej oceniane filmy"
-        fetchUrl="https://api.themoviedb.org/3/movie/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07"
+        fetchUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
         title="Nadchodzące premiery filmowe"
-        fetchUrl="https://api.themoviedb.org/3/movie/upcoming?api_key=c7dc4c7edb4a2f3d428d569c08985e07"
+        fetchUrl={`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
         title="Najpopularniejsze w TV"
-        fetchUrl="https://api.themoviedb.org/3/tv/popular?api_key=c7dc4c7edb4a2f3d428d569c08985e07"
+        fetchUrl={`https://api.themoviedb.org/3/tv/popular?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
         title="Najwyżej oceniane w TV"
-        fetchUrl="https://api.themoviedb.org/3/tv/top_rated?api_key=c7dc4c7edb4a2f3d428d569c08985e07"
+        fetchUrl={`https://api.themoviedb.org/3/tv/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Footer />
     </div>

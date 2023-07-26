@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 
 
 
-
 const baseUrl = 'http://image.tmdb.org/t/p/original/';
-
 
 
 function Row({ title, fetchUrl, isLargeRow }) {
