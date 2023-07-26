@@ -25,12 +25,12 @@ function Home() {
         fetchUrl={`https://api.themoviedb.org/3/trending/all/day?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
-        title="Najwyżej oceniane filmy"
-        fetchUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
-      />
-      <Row
         title="Nadchodzące premiery filmowe"
         fetchUrl={`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`}
+      />
+      <Row
+        title="Najwyżej oceniane filmy"
+        fetchUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
         title="Najpopularniejsze w TV"

@@ -40,7 +40,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
     return (
         <div className="row-container">
-            <h2>{title}</h2>
+            <h2 className="row-title">{title}</h2>
             <div className="row-posters scroll-moz">
                 {
                     movies && movies.map(item => {
