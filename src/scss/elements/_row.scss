@@ -1,9 +1,11 @@
 .row-container {
     margin-left: 20px;
+    padding-top: 0.7rem;
 }
 
 .row-title {
     text-shadow: 1px 1px 2px black;
+    
 }
 
 .row-posters {
@@ -24,7 +26,7 @@
 .row-poster {
     object-fit: contain;
     
-    height: 180px;
+    height: 195px;
     max-width: 100%;
     margin-right: 10px;
     transition: transform 450ms;
