@@ -5,44 +5,11 @@
 
 .row-title {
     text-shadow: 1px 1px 2px black;
-    
 }
 
-.row-posters {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
 
-.scroll-moz {
-    scrollbar-width: none;
-}
 
-.row-poster {
-    object-fit: contain;
-    
-    height: 195px;
-    max-width: 100%;
-    margin-right: 10px;
-    transition: transform 450ms;
 
-    border-radius: 10px;
 
-    &:hover {
-        transform: scale(1.08);
-    }
-}
 
-.row-posterLarge {
-    height: 370px;
-    border-radius: 20px;
-
-    &:hover {
-        transform: scale(1.09);
-    }
-}

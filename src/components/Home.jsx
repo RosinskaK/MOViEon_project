@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 //import { useNavigate } from "react-router-dom";
 
 import BarNavigation from "./BarNavigation";
@@ -9,6 +10,7 @@ import Footer from "./Footer";
 
 
 function Home() {
+
   return (
     <div className="home-main-container">
       <BarNavigation />

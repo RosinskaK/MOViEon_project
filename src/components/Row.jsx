@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import SingleImageInRow from "./SingleImageInRow";
 
 
-const baseUrl = 'http://image.tmdb.org/t/p/original/';
+//const baseUrl = 'http://image.tmdb.org/t/p/original/';
 
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -38,21 +41,61 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
     //console.log(movies);
 
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 3000, min: 2000 },
+          items: 5,
+          partialVisibilityGutter: 40,
+          slidesToSlide: 2,
+        },
+        largDesktop: {
+            breakpoint: { max: 2000, min: 1500 },
+            items: 4,
+            partialVisibilityGutter: 40,
+            slidesToSlide: 2,
+        },
+        desktop: {
+          breakpoint: { max: 1500, min: 1150 },
+          items: 3,
+          partialVisibilityGutter: 20,
+        },
+        tablet: {
+          breakpoint: { max: 1150, min: 500 },
+          items: 2,
+          partialVisibilityGutter: 100,
+        },
+        mobile: {
+          breakpoint: { max: 500, min: 0 },
+          items: 1,
+          partialVisibilityGutter: 20,
+        }
+      };
+
+
+      const singleImage = movies && movies.map(item => (
+        <SingleImageInRow 
+        //className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
+        key={item.id} 
+        //src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
+        poster_path={item.poster_path}
+        backdrop_path={item.backdrop_path}
+        alt={item.title} 
+        isLargeRow={isLargeRow}
+        />
+     ));
+
     return (
         <div className="row-container">
             <h2 className="row-title">{title}</h2>
-            <div className="row-posters scroll-moz">
+            <Carousel 
+                responsive={responsive}
+                partialVisible={true}
+                >
                 {
-                    movies && movies.map(item => {
-                       return <img 
-                       className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
-                       key={item.id} 
-                       src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
-                       alt={item.title} 
-                       />
-                    })
+                    singleImage
                 }
-            </div>
+            </Carousel>
         </div>
     );
 }
@@ -60,6 +103,28 @@ function Row({ title, fetchUrl, isLargeRow }) {
 export default Row;
 
 
+
+
+
+
+           
+//return (
+//     <div className="row-container">
+//     <h2 className="row-title">{title}</h2>
+//     <div className="row-posters scroll-moz">
+//         {
+//             movies && movies.map(item => {
+//                return <img 
+//                className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
+//                key={item.id} 
+//                src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
+//                alt={item.title} 
+//                />
+//             })
+//         }
+//     </div>
+// </div>
+// );
 
 
     // useEffect( () => {
