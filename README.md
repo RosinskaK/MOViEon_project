@@ -1,7 +1,7 @@
 # MOViE on app
 
 
-The MOViEon is a movie app similar to streaming apps like Netflix and SkyShowTime, it downloads data about films and series from  <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noreferrer"> TheMovieDb API
+The MOViEon is a movie app similar to streaming apps like Netflix and SkyShowTime, it downloads data about films and series from  <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noreferrer" rel="noopener"> TheMovieDb API </a>
 
 It is currently under construction 💪
 
