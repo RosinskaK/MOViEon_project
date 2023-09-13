@@ -21,25 +21,30 @@ function Home() {
           `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`
         }
         isLargeRow
+        isFilm
       />
       <Row
         title="Najnowsze trendy filmowe"
         fetchUrl={`https://api.themoviedb.org/3/trending/all/day?api_key=${import.meta.env.VITE_API_KEY}`}
+        isFilm
+        isSerial
       />
       <Row
         title="Nadchodzące premiery filmowe"
         fetchUrl={`https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_API_KEY}`}
+        isFilm
       />
       <Row
         title="Najwyżej oceniane filmy"
         fetchUrl={`https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
+        isFilm
       />
       <Row
-        title="Najpopularniejsze w TV"
+        title="Najpopularniejsze seriale w TV"
         fetchUrl={`https://api.themoviedb.org/3/tv/popular?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Row
-        title="Najwyżej oceniane w TV"
+        title="Najwyżej oceniane seriale w TV"
         fetchUrl={`https://api.themoviedb.org/3/tv/top_rated?api_key=${import.meta.env.VITE_API_KEY}`}
       />
       <Footer />

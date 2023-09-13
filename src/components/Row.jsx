@@ -8,7 +8,7 @@ import SingleImageInRow from "./SingleImageInRow";
 //const baseUrl = 'http://image.tmdb.org/t/p/original/';
 
 
-function Row({ title, fetchUrl, isLargeRow }) {
+function Row({ title, fetchUrl, isLargeRow, isFilm, isSerial }) {
 
     const [movies, setMovies] = useState([]);   
 
@@ -39,8 +39,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }, [fetchUrl]);
 
 
-    //console.log(movies);
+    console.log(movies);
 
+
+    //do karuzeli
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -80,8 +82,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
         //src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
         poster_path={item.poster_path}
         backdrop_path={item.backdrop_path}
-        alt={item.title} 
+        title={item.title} 
         isLargeRow={isLargeRow}
+
+        name={item.name}
+        release_date={item.release_date}
+        first_air_date={item.first_air_date}
+        overview={item.overview}
+        isFilm={isFilm}
+        isSerial={isSerial}
         />
      ));
 
