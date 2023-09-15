@@ -134,24 +134,21 @@
     outline: none;
     border: none;
     color: whitesmoke;
-    font-size: 0.9rem;
+    font-size: 13.5px;
     font-weight: 700;
     background: #ff493b;
 
     margin-top: 3px;
-    width: 130px;
+    width: 110px;
 
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
 
-    border-radius: 10px;
-    transition: background-color 1s ease-in-out;
+    border-radius: 50px;
 
-    -webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
+    transition: background-color 0.5s ease-in-out;
 
     float: right;
     
@@ -159,6 +156,12 @@
     margin-right: 15px;
 
     &:hover {
-        background-color: #5b4df6; //1;
+        background-color: #9f34c6; //1;
     }
+
+    &:active {
+        -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+        }
 }
