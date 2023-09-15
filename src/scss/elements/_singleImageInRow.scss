@@ -3,7 +3,7 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 20px;
+    padding: 25px;
 
     &::-webkit-scrollbar {
         display: none;
@@ -29,7 +29,7 @@
     position: relative;  //!!!!!!!!!!!!!!!!!!!
 
     &:hover {
-        transform: scale(1.07);
+        transform: scale(1.06);
     }
 }
 
@@ -42,7 +42,7 @@
     position: relative;  //!!!!!!!!!!!!!!!!!!!
 
     &:hover {
-        transform: scale(1.08);
+        transform: scale(1.09);
     }
 }
 
@@ -97,6 +97,7 @@
 
 .row-poster:hover .single-image-hover {
     top: 0;
+    
 }
 
 .image-hover-title {

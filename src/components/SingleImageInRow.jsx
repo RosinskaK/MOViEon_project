@@ -9,7 +9,18 @@ function truncate(str, n) {
 }
 
 
+
+
 function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name, release_date, first_air_date, overview, isFilm,isSerial} ) {
+
+  
+
+  // const film_date = release_date.slice(0,4);
+  // console.log(film_date);
+  
+
+  
+
 
   return (
     <div className="row-posters scroll-moz">
@@ -22,7 +33,7 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
         <div className={`single-image-hover ${isLargeRow && 'single-image-hoverLarge'}`}>
           <h3 className='image-hover-title'>{isFilm ? title : name} {isSerial ? name : ""}</h3>
           <p className='image-hover-type-date'>
-            <span>{release_date ? 'Film' : 'Serial'}</span> | {isFilm ? release_date : first_air_date} {isSerial ? first_air_date : ""}
+            <span>{release_date ? 'Film' : 'Serial'}</span> | {isFilm ? `${release_date?.slice(0,4)}` : `${first_air_date?.slice(0,4)}`} {isSerial ? `${first_air_date?.slice(0,4)}` : ""}
             </p>
           <p className={`image-hover-overview ${isLargeRow && 'single-hover-overviewLarge'}`}>
               {isLargeRow ? overview : truncate(overview, 150)}
