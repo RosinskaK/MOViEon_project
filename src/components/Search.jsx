@@ -11,10 +11,10 @@ function Search() {
         <BarNavigation />
         <div className='search-container'>
           <div className='search-input'>
-            <input type='text' placeholder='Szukaj'></input>
+            <input type='text' placeholder='Szukaj filmów'></input>
           </div>
-          <div>
-
+          <div className='search-results-container'>
+            Teraz
           </div>
         </div>
     </div>
