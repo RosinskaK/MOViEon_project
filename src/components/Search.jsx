@@ -7,9 +7,16 @@ function Search() {
 
 
     return (
-    <div>
+    <div className='search-main'>
         <BarNavigation />
-        <div style={{backgroundColor:'orange', height:'2000px', paddingTop:'100px'}}>Search!!!!!!!!!!!!!!!!!!!</div>
+        <div className='search-container'>
+          <div className='search-input'>
+            <input type='text' placeholder='Szukaj'></input>
+          </div>
+          <div>
+
+          </div>
+        </div>
     </div>
   );
 }
