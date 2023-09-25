@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 //import { useNavigate } from "react-router-dom";
 import BarNavigation from './BarNavigation';
+import SingleCardSearch from './SingleCardSearch';
 
 
 function Search() {
@@ -26,6 +27,7 @@ function Search() {
 
   };
 
+  console.log(results);
 
     return (
     <div className='search-main'>
@@ -33,6 +35,7 @@ function Search() {
         <div className='search-container'>
           <div className='search-input'>
             <input 
+            name='search'
             type='text' 
             placeholder='Szukaj filmów'
             value={query}
@@ -41,11 +44,9 @@ function Search() {
           </div>
           <div className='search-results-container'>
             {results.length > 0 && (
-              <ul>
-                {results.map(movie => (
-                  <li>{movie.title}</li>
-                ))}
-              </ul>
+              results.map(movie => (
+                <SingleCardSearch key={movie.id} movie={movie} />
+                ))
             )}
           </div>
         </div>
