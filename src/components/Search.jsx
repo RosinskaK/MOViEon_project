@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 //import { useNavigate } from "react-router-dom";
 import BarNavigation from './BarNavigation';
 import SingleCardSearch from './SingleCardSearch';
+import Footer from './Footer';
 
 
 function Search() {
@@ -29,8 +30,9 @@ function Search() {
 
   console.log(results);
 
-    return (
-    <div className='search-main'>
+  return (
+    <>
+     <div className='search-main'>
         <BarNavigation />
         <div className='search-container'>
           <div className='search-input'>
@@ -50,7 +52,9 @@ function Search() {
             )}
           </div>
         </div>
-    </div>
+     </div>
+     <Footer/>
+    </>
   );
 }
 
