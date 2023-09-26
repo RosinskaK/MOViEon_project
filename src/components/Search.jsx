@@ -45,11 +45,14 @@ function Search() {
             ></input>
           </div>
           <div className='search-results-container'>
-            {results.length > 0 && (
+            {results.length > 0 ? (
               results.map(movie => (
                 <SingleCardSearch key={movie.id} movie={movie} />
                 ))
-            )}
+            ) : ( 
+            <h2 className='search-empty-results'>Szukaj tutaj swoich ulubionych filmów!</h2>
+              )
+            }
           </div>
         </div>
      </div>
