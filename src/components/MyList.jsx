@@ -1,10 +1,12 @@
 import React from 'react'
 import BarNavigation from './BarNavigation';
 import soon from '/soon.png';
+import Footer from './Footer';
 
 function MyList() {
   return (
-    <div>
+    <>
+     <div>
         <BarNavigation />
         <div className='mylist'>
             <div className='mylist-lettering'>
@@ -13,7 +15,9 @@ function MyList() {
             </div>
             <img src={soon} alt='businessman' className='mylist-image'/>
         </div>
-    </div>
+     </div>
+     <Footer />
+    </>
   );
 }
 
