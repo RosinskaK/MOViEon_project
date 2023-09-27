@@ -1,19 +1,28 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import { GlobalContext } from '../context/GlobalState';
+
 import BarNavigation from './BarNavigation';
 import soon from '/soon.png';
 import Footer from './Footer';
 
 function MyList() {
+
+  const {mylist} = useContext(GlobalContext);
+
+
   return (
     <>
      <div>
         <BarNavigation />
         <div className='mylist'>
             <div className='mylist-lettering'>
-                <h2>Strona Moja Lista jest w trakcie tworzenia</h2>
-                <h2>My List page is under construction</h2>
+                <h1>Moja lista</h1>
             </div>
-            <img src={soon} alt='businessman' className='mylist-image'/>
+            <div>
+            {mylist.map(movie => (
+                  <h1 key={movie.id}>{movie.title}</h1>
+                ))}
+            </div>
         </div>
      </div>
      <Footer />

@@ -24,7 +24,7 @@ function Home() {
         isFilm
       />
       <Row
-        title="Najnowsze trendy filmowe"
+        title="Najnowsze trendy filmowe i TV"
         fetchUrl={`https://api.themoviedb.org/3/trending/all/day?api_key=${import.meta.env.VITE_API_KEY}`}
         isFilm
         isSerial
