@@ -1,4 +1,4 @@
-# MOViE on app
+# MOViEon app
 
 
 The MOViEon is a movie app similar to streaming apps like Netflix and SkyShowTime, it downloads data about films and series from  <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noreferrer" rel="noopener"> TheMovieDb API </a>
@@ -22,6 +22,10 @@ I'm working on adding a search engine for movies and series and a database stori
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) 
+
+- Context API
+
+- Local Storage
 
 <!-- ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) -->
 
