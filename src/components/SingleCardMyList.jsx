@@ -1,16 +1,10 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../context/GlobalState";
+import React from 'react';
+
 
 const baseUrl = "http://image.tmdb.org/t/p/original/";
 
-function SingleCardSearch({ movie }) {
-  const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
-  let storedMovie = mylist.find(o => o.id === movie.id);
-
-  const mylistDisabled = storedMovie ? true : false;
-
-
+function SingleCardMyList({ movie, type }) {
   return (
     <div className="card-main">
       <div className="card-image">
@@ -32,14 +26,8 @@ function SingleCardSearch({ movie }) {
         {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : ""}
         {movie.first_air_date ? `${movie.first_air_date?.slice(0, 4)}` : ""}
       </p>
-      <button 
-      disabled={mylistDisabled}
-      onClick={() => addMovieToMylist(movie)}
-      >
-        Ulubione
-      </button>
     </div>
   );
 }
 
-export default SingleCardSearch;
+export default SingleCardMyList;

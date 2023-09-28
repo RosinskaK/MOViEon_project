@@ -2,8 +2,11 @@ import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 import BarNavigation from './BarNavigation';
-import soon from '/soon.png';
+//import soon from '/soon.png'; usunac
 import Footer from './Footer';
+import SingleCardMyList from './SingleCardMyList';
+
+
 
 function MyList() {
 
@@ -12,18 +15,24 @@ function MyList() {
 
   return (
     <>
-     <div>
+     <div className='mylist'>
         <BarNavigation />
-        <div className='mylist'>
+        
             <div className='mylist-lettering'>
                 <h1>Moja lista</h1>
+                </div>
+            <div className='mylist-main-container'>
+              {mylist.length > 0 ? (
+                <div className='mylist-films-container'>
+                  {mylist.map(movie => (
+                    <SingleCardMyList key={movie.id} movie={movie} type='mylist' />
+                  ))}
+                </div>
+              ) : (
+                <h2 className='mylist-empty-list'>Dodaj filmy do swojej listy!</h2>
+              )}
             </div>
-            <div>
-            {mylist.map(movie => (
-                  <h1 key={movie.id}>{movie.title}</h1>
-                ))}
-            </div>
-        </div>
+        
      </div>
      <Footer />
     </>

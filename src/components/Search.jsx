@@ -50,7 +50,7 @@ function Search() {
                 <SingleCardSearch key={movie.id} movie={movie} />
                 ))
             ) : ( 
-            <h2 className='search-empty-results'>Szukaj tutaj swoich ulubionych filmów!</h2>
+            <h2 className='search-empty-results'>Tutaj szukaj swoich ulubionych filmów!</h2>
               )
             }
           </div>
