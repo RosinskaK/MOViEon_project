@@ -12,11 +12,17 @@
     width: 90%;
     height: 100%;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 130px;
     padding-bottom: 30px;   
         h1 {
         padding-bottom: 30px;
     }
+}
+
+.mylist-movies-counter {
+    width: 90%;
+    text-align: right;
+    margin-bottom: 20px;
 }
 
 .mylist-main-container {
@@ -31,6 +37,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .mylist-empty-list {

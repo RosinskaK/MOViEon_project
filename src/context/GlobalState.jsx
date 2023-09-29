@@ -27,8 +27,19 @@ export const GlobalProvider = props => {
     };
 
 
+    const removeMovieFromMylist = (id) => {
+        dispatch({ type: "REMOVE_MOVIE_FROM_MYLIST", payload: id });
+    };
+
+
     return (
-        <GlobalContext.Provider value={{ mylist: state.mylist, addMovieToMylist, }}>
+        <GlobalContext.Provider 
+            value={{ 
+                mylist: state.mylist, 
+                addMovieToMylist, 
+                removeMovieFromMylist,
+            }}
+        >
             {props.children}
         </GlobalContext.Provider>
     );

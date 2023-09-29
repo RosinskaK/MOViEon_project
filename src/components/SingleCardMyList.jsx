@@ -1,12 +1,15 @@
 import React from 'react';
+import MovieControls from './MovieControls';
 
 
 const baseUrl = "http://image.tmdb.org/t/p/original/";
 
 
+//mozliwe ze props type nie bedzie potrzebny
+
 function SingleCardMyList({ movie, type }) {
   return (
-    <div className="card-main">
+    <div className="card-main card-mylist-main">
       <div className="card-image">
         {movie.poster_path ? (
           <img
@@ -26,6 +29,7 @@ function SingleCardMyList({ movie, type }) {
         {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : ""}
         {movie.first_air_date ? `${movie.first_air_date?.slice(0, 4)}` : ""}
       </p>
+      <MovieControls movie={movie} />
     </div>
   );
 }
