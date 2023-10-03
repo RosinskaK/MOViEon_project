@@ -28,10 +28,12 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
             {first_air_date ? `${first_air_date?.slice(0,4)}` : ""}
             </p>
           <p className={`image-hover-overview ${isLargeRow && 'single-hover-overviewLarge'}`}>
-              {isLargeRow ? overview : truncate(overview, 150)}
+              {isLargeRow ? overview : truncate(overview, 110)}
             </p>
           <div className='btn-div-hover'>
-            <button className='image-hover-btn'>Ulubione</button>
+            <button className='image-hover-btn single-img-btn-one'>Zwiastun</button>
+            <button className='image-hover-btn'>+ Moja lista</button>
+            <button className='image-hover-btn single-img-btn-three'>Więcej</button>
           </div>
         </div>
       </div>

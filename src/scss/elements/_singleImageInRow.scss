@@ -73,7 +73,7 @@
     border-radius: 12px;
     transition: 1s;
 
-    padding: 8px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 
@@ -105,7 +105,7 @@
 
 .image-hover-title {
     margin-bottom: 7px;
-    line-height: 17px;
+    line-height: 20px;
 }
 
 .image-hover-type-date {
@@ -132,6 +132,11 @@
     margin-bottom: 15px;
 }
 
+.btn-div-hover {
+    display: flex;
+    justify-content: center;
+}
+
 .image-hover-btn {
     cursor: pointer;
     outline: none;
@@ -142,10 +147,10 @@
     background: #fb5f34;
 
     margin-top: 3px;
-    width: 110px;
+    //min-width: 50px;
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 11px;
+    padding-right: 11px;
     padding-top: 5px;
     padding-bottom: 5px;
 
@@ -153,10 +158,9 @@
 
     transition: background-color 0.5s ease-in-out;
 
-    float: right;
-    
+
     margin-bottom: 5px;
-    margin-right: 15px;
+    
 
     -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
@@ -171,4 +175,13 @@
         -moz-box-shadow: none;
         box-shadow: none;
         }
+}
+
+.single-img-btn-one {
+    margin-right: 10px;
+}
+
+.single-img-btn-three {
+    margin-left: 10px;
+    margin-right: 5px;
 }

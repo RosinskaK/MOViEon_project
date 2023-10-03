@@ -36,8 +36,10 @@ function SingleCardSearch({ movie }) {
       disabled={mylistDisabled}
       onClick={() => addMovieToMylist(movie)}
       >
-        Ulubione
+        + Moja lista
       </button>
+      <button>Zwiastun</button>
+      <button>Więcej</button>
     </div>
   );
 }

@@ -11,8 +11,10 @@ function MovieControls({ movie, type }) {
         <button
         onClick={() => removeMovieFromMylist(movie.id)}
         >
-            Usuń z Mojej listy
+            - Moja lista
         </button>
+        <button>Zwiastun</button>
+        <button>Więcej</button>
     </div>
   )
 }
