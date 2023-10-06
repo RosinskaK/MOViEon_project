@@ -5,7 +5,9 @@ The MOViEon is a movie app similar to streaming apps like Netflix and SkyShowTim
 
 It is currently under construction 💪
 
-I'm working on adding a search engine for movies and series and a database storing a list of favorites❤️️
+So My list (a database storing a list of favorite films) is working fine and search engine for movies too.
+
+Now I'm working on adding a modal showing details of a given film and maybe I would also add a link to the movies trailers on YouTube 😁
 
 🙋 so stay tuned for newest improvements.
 
