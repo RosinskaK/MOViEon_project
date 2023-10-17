@@ -7,14 +7,15 @@ function MovieControls({ movie, type }) {
     const {removeMovieFromMylist} = useContext(GlobalContext);
 
   return (
-    <div>
+    <div className='moviecontrols-main'>
         <button
+        className='moviecontrols-btn'
         onClick={() => removeMovieFromMylist(movie.id)}
         >
-            - Moja lista
-        </button>
+          - Moja lista
+        </button >
         {/* <button>Zwiastun</button> */}
-        <button>Więcej</button>
+        <button className='moviecontrols-btn'>Więcej</button>
     </div>
   )
 }

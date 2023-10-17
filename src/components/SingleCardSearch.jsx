@@ -32,14 +32,17 @@ function SingleCardSearch({ movie }) {
         {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : ""}
         {movie.first_air_date ? `${movie.first_air_date?.slice(0, 4)}` : ""}
       </p>
-      <button 
-      disabled={mylistDisabled}
-      onClick={() => addMovieToMylist(movie)}
-      >
-        + Moja lista
-      </button>
-      <button>Zwiastun</button>
-      <button>Więcej</button>
+      <div className="card-search-btns-main">
+        <button 
+        disabled={mylistDisabled}
+        className="card-search-btn"
+        onClick={() => addMovieToMylist(movie)}
+        >
+          + Moja lista
+        </button>
+        {/* <button>Zwiastun</button> */}
+        <button className="card-search-btn">Więcej</button>
+      </div>
     </div>
   );
 }

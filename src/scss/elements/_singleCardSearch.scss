@@ -1,5 +1,13 @@
+//also here are classes for SingleCardMyList and MovieControls
+
 .card-main {
     width: 220px;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+
     //background-color: rgba(11, 11, 13, 0.481);
     // background-color: rgba(16, 27, 51, 0.419);
     background-color: $backgroundcolor-btns-navbar;
@@ -63,7 +71,7 @@
     margin-bottom: 6px;
     font-size: 15px;
     padding-left: 3px;
-    line-height: 18px;
+    line-height: 19px;
 }
 
 .card-description {
@@ -75,4 +83,32 @@
         font-weight: bold;
         font-style: italic;
     }
+}
+
+.card-search-btns-main{
+    display: flex;
+    justify-content: center;
+}
+
+.card-search-btn {
+    @include btnsSecondary();
+    margin-right: 5px;
+    margin-bottom: 10px;
+    &:disabled {
+        background-color: rgb(180, 179, 179);
+    }
+}
+
+//MovieControls ----------------------------------------------------------
+.moviecontrols-main {
+    //height: 3rem;
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.moviecontrols-btn {
+    @include btnsSecondary();
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
