@@ -13,7 +13,7 @@ function MovieControls({ movie, type }) {
         >
             - Moja lista
         </button>
-        <button>Zwiastun</button>
+        {/* <button>Zwiastun</button> */}
         <button>Więcej</button>
     </div>
   )

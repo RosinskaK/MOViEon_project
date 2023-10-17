@@ -1,0 +1,43 @@
+
+//secondary buttons
+@mixin btnsSecondary() {
+    cursor: pointer;
+    outline: none;
+    
+    color: whitesmoke;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 500;
+
+    background: transparent;
+
+    border-radius: 50px;
+
+    border: 3px solid #5d3094;
+
+    margin-top: 3px;
+    margin-bottom: 5px;
+    //min-width: 50px;
+
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 5.5px;
+    padding-bottom: 5.5px;
+
+    transition: background-color 0.4s ease-in-out;
+
+    &:hover {
+        background-color: #5d3094; //1;#9f34c6
+        -webkit-box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.4);
+        box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.4);
+        color: white;
+    }
+
+    &:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        }
+}
+

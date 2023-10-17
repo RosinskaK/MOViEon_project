@@ -23,6 +23,15 @@
     width: 90%;
     text-align: right;
     margin-bottom: 20px;
+    
+    span{
+        font-weight: 600;
+        background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
 }
 
 .mylist-main-container {

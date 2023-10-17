@@ -21,7 +21,7 @@ function MyList() {
             <h1>Moja lista</h1>
           </div>
           <div className='mylist-movies-counter'>
-            Mam filmów: {mylist.length}
+            <span>Mam filmów:</span> {mylist.length}
           </div>
           <div className='mylist-main-container'>
             {mylist.length > 0 ? (
