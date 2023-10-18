@@ -141,7 +141,7 @@
     @include btnsSecondary();
 
     &:disabled {
-        background-color: rgb(180, 179, 179);
+        background-color: rgba(148, 146, 146, 0.716);
     }
 }
 

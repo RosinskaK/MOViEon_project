@@ -53,6 +53,10 @@
         // border-style: solid;
         background: linear-gradient(233.25deg,#5b4df6,#ff493b); //1;
     }
+    &:disabled {
+        background: transparent;
+        background-color: rgba(148, 146, 146, 0.716);
+    }
 }
 
 .banner-fadeBottom {
