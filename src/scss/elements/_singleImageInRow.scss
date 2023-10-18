@@ -139,6 +139,10 @@
 
 .image-hover-btn {
     @include btnsSecondary();
+
+    &:disabled {
+        background-color: rgb(180, 179, 179);
+    }
 }
 
 .single-img-btn-one {

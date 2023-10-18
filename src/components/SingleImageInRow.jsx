@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { GlobalContext } from "../context/GlobalState";
 
 
 const baseUrl = 'http://image.tmdb.org/t/p/original/';
@@ -10,7 +11,19 @@ function truncate(str, n) {
 
 
 
-function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name, release_date, first_air_date, overview, isFilm,isSerial} ) {
+function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name, release_date, first_air_date, overview, isFilm,isSerial, movie} ) {
+
+///////////////////////////////////////////
+const { addMovieToMylist, mylist } = useContext(GlobalContext);
+
+  let storedMovie = mylist.find(o => o.id === movie.id);
+
+  const mylistDisabled = storedMovie ? true : false;
+
+
+
+///////////////////////////////////////////
+
 
 
   return (
@@ -32,7 +45,11 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
             </p>
           <div className='btn-div-hover'>
             {/* <button className='image-hover-btn single-img-btn-one'>Zwiastun</button> */}
-            <button className='image-hover-btn'>+ Moja lista</button>
+            <button 
+            className='image-hover-btn'
+            disabled={mylistDisabled}
+            onClick={() => addMovieToMylist(movie)}
+            >+ Moja lista</button>
             <button className='image-hover-btn single-img-btn-three'>Więcej</button>
           </div>
         </div>

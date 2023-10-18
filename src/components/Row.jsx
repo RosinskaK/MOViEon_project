@@ -91,6 +91,8 @@ function Row({ title, fetchUrl, isLargeRow, isFilm, isSerial }) {
         overview={item.overview}
         isFilm={isFilm}
         isSerial={isSerial}
+
+        movie={item}
         />
      ));
 
