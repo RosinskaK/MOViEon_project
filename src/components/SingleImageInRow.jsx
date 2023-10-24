@@ -10,7 +10,6 @@ function truncate(str, n) {
 }
 
 
-
 function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name, release_date, first_air_date, overview, isFilm,isSerial, movie} ) {
 
 ///////////////////////////////////////////
@@ -20,11 +19,7 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
   const mylistDisabled = storedMovie ? true : false;
 
-
-
 ///////////////////////////////////////////
-
-
 
   return (
     <div className="row-posters scroll-moz">
@@ -46,10 +41,11 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
           <div className='btn-div-hover'>
             {/* <button className='image-hover-btn single-img-btn-one'>Zwiastun</button> */}
             <button 
-            className='image-hover-btn'
-            disabled={mylistDisabled}
-            onClick={() => addMovieToMylist(movie)}
-            >+ Moja lista</button>
+              className='image-hover-btn'
+              disabled={mylistDisabled}
+              onClick={() => addMovieToMylist(movie)}
+            >+ Moja lista
+            </button>
             <button className='image-hover-btn single-img-btn-three'>Więcej</button>
           </div>
         </div>
