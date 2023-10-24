@@ -48,7 +48,7 @@ function BarNavigation () {
         <div className={`nav-main-container ${show && 'nav-black'}`}>
             <div className="nav-left-icons">
                 <h1 className="nav-logo"><Link to='/' className='logo-link'>MOV<span>i</span>E<span>on</span></Link></h1>
-                <button onClick={handleNavigateHome} className="nav-left-icon nav-btns">Strona głowna</button>
+                <button onClick={handleNavigateHome} className="nav-left-icon nav-btns">Strona główna</button>
                 <button onClick={handleNavigateMyList} className="nav-left-icon nav-btns">Moja lista</button>
             </div>
             <div className="nav-right-icons">

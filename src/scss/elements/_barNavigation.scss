@@ -54,9 +54,7 @@
     display: flex;
 }
 
-.nav-btn-search {
-    margin-right: 1rem;
-}
+
 
 // @keyframes hello {
 //     from {
@@ -81,10 +79,12 @@
 }
 
 .nav-btns {
+    font-family: 'Poppins', sans-serif;
+
     height: 2.2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-top: 0.55rem;
+    padding-top: 0.35rem;
     padding-bottom: 0.6rem;
 
     cursor: pointer;
@@ -103,7 +103,7 @@
     border-radius: 30px;
     transition: all 0.7s;
     //border: 2px solid transparent;
-
+    
     &:hover {
         // border-radius: 30px;
         // border-width: 2px;
@@ -111,5 +111,10 @@
         background: linear-gradient(233.25deg,#4d3fe9,#f13d30); //1;
         color: white;
     }
+}
+
+.nav-btn-search {
+    margin-right: 1rem;
+    padding-top: 0.55rem;
 }
 
