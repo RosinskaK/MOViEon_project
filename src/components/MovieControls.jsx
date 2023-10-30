@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import ContentModal from './ContentModal';
 
 
 function MovieControls({ movie, type }) {
@@ -15,7 +16,10 @@ function MovieControls({ movie, type }) {
           - Moja lista
         </button >
         {/* <button>Zwiastun</button> */}
-        <button className='moviecontrols-btn'>Więcej</button>
+        <ContentModal>
+          <button className='moviecontrols-btn'>Więcej</button>
+        </ContentModal>
+
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
+import ContentModal from './ContentModal';
 
 
 const baseUrl = 'http://image.tmdb.org/t/p/original/';
@@ -46,7 +47,9 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
               onClick={() => addMovieToMylist(movie)}
             >+ Moja lista
             </button>
-            <button className='image-hover-btn single-img-btn-three'>Więcej</button>
+            <ContentModal>
+              <button className='image-hover-btn single-img-btn-three'>Więcej</button>
+            </ContentModal>
           </div>
         </div>
       </div>

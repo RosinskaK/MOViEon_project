@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
+import ContentModal from './ContentModal';
 
 
 function Banner() {
@@ -65,7 +66,9 @@ function Banner() {
                 disabled={mylistDisabled}
                 onClick={() => addMovieToMylist(movie)}
                 >+ Moja lista</button>
-                <button className='banner-btn'>Więcej</button>
+                <ContentModal>
+                    <button className='banner-btn'>Więcej</button>
+                </ContentModal>
             </div>
             <h1 className='banner-description'>{truncate(movie?.overview, 180)}</h1>
         </div>

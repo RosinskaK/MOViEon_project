@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import ContentModal from "./ContentModal";
 
 const baseUrl = "http://image.tmdb.org/t/p/original/";
 
@@ -41,7 +42,9 @@ function SingleCardSearch({ movie }) {
           + Moja lista
         </button>
         {/* <button>Zwiastun</button> */}
-        <button className="card-search-btn">Więcej</button>
+        <ContentModal>
+          <button className="card-search-btn">Więcej</button>
+        </ContentModal>
       </div>
     </div>
   );
