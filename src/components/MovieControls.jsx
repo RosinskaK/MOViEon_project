@@ -16,7 +16,7 @@ function MovieControls({ movie, type }) {
           - Moja lista
         </button >
         {/* <button>Zwiastun</button> */}
-        <ContentModal>
+        <ContentModal movieId={movie}>
           <button className='moviecontrols-btn'>Więcej</button>
         </ContentModal>
 

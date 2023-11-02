@@ -11,24 +11,28 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  width: '90%',
+  height: '80%',
+  bgcolor: '#27282b',
+  //border: '1px solid #000',
   boxShadow: 24,
-  color: 'black',
+  color: 'whitesmoke',
   p: 4,
+  borderRadius: '10px',
 };
 
-export default function ContentModal( {children} ) {
+export default function ContentModal( {children, movieId} ) {
   const [open, setOpen] = React.useState(false);
+
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <div onClick={handleOpen} >
+      <Box onClick={handleOpen} >
         {children}
-      </div>
+      </Box>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -45,7 +49,7 @@ export default function ContentModal( {children} ) {
         <Fade in={open}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
+              {movieId.title || movieId.name || movieId.original_title}
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula.

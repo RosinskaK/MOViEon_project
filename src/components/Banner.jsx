@@ -40,7 +40,7 @@ function Banner() {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
 
-////////blobal context mylist stored movies
+////////global context mylist stored movies
     const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
     let storedMovie = mylist.find(o => o.id === movie.id);
@@ -66,7 +66,7 @@ function Banner() {
                 disabled={mylistDisabled}
                 onClick={() => addMovieToMylist(movie)}
                 >+ Moja lista</button>
-                <ContentModal>
+                <ContentModal movieId={movie}>
                     <button className='banner-btn'>Więcej</button>
                 </ContentModal>
             </div>

@@ -47,7 +47,7 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
               onClick={() => addMovieToMylist(movie)}
             >+ Moja lista
             </button>
-            <ContentModal>
+            <ContentModal movieId={movie}>
               <button className='image-hover-btn single-img-btn-three'>Więcej</button>
             </ContentModal>
           </div>

@@ -42,7 +42,7 @@ function SingleCardSearch({ movie }) {
           + Moja lista
         </button>
         {/* <button>Zwiastun</button> */}
-        <ContentModal>
+        <ContentModal movieId={movie}>
           <button className="card-search-btn">Więcej</button>
         </ContentModal>
       </div>
