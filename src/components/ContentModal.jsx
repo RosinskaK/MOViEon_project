@@ -6,6 +6,11 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+
+
+const baseUrl = "http://image.tmdb.org/t/p/original/";
+
+//style for Content Modal
 const style = {
   position: 'absolute',
   top: '50%',
@@ -28,6 +33,9 @@ export default function ContentModal( {children, movieId} ) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+
+
+
   return (
     <div>
       <Box onClick={handleOpen} >
@@ -48,12 +56,46 @@ export default function ContentModal( {children, movieId} ) {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
-              {movieId.title || movieId.name || movieId.original_title}
-            </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <Box className='modal-container'>
+              <div className='modal-img-div'>
+                {movieId.poster_path ? (
+                  <img
+                    src={`${baseUrl}${movieId.poster_path}`}
+                    alt={movieId.title ||  movieId.name}
+                  />
+                  ) : (
+                  <div className="modal-no-image">
+                    <p>There is no image</p>
+                    <h2>Sorry!</h2>
+                  </div>
+                )}
+              </div>
+              <div className='modal-main-content'>
+                <h2 className='modal-main-title'>
+                  {movieId.title || movieId.name || movieId.original_title}
+                </h2>
+                <h4 className='modal-year'>
+                  {(movieId.release_date || movieId.first_air_date || '---').substring(0,4)} rok
+                  <span> {movieId.vote_average?.toFixed(1)}/10 w TMDB</span>
+
+
+                </h4>
+                <div className='modal-description-container'>
+                  <h5 className='modal-description'>
+                    {movieId.overview}
+                  </h5>
+                </div>
+                <button
+                  className='modal-yt-btn'
+                  variant='contained'
+                  target='_blank'
+                  href={`https://www.youtube.com/watch?v=${'video'}`} 
+                >
+                  Obejrzyj zwiastun
+                </button>
+              </div>
+              <div className='modal-actors'></div>
+            </Box>
           </Box>
         </Fade>
       </Modal>

@@ -1,0 +1,56 @@
+.modal-container {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.modal-img-div {
+    width: 50%;
+
+    img {
+      max-width: 300px;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+}
+
+.modal-no-image {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.modal-main-content {
+    max-width: 50%;
+    margin: 0 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-main-title {
+    margin-bottom: 10px;
+}
+
+.modal-year {
+    font-weight: 400;
+
+    span {
+        padding: 0 20px;
+    }
+    
+}
+
+.modal-description-container {
+    background-color: $backgroundcolor-btns-navbar;
+    margin: 10px 0;
+}
+
+.modal-description {
+    font-weight: 400;
+    padding: 10px;
+    text-align: justify;
+}
+
+.modal-yt-btn {
+    background-color: $logocolor-one;
+}
