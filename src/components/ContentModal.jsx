@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react'
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -26,15 +26,41 @@ const style = {
   borderRadius: '10px',
 };
 
-export default function ContentModal( {children, movieId} ) {
-  const [open, setOpen] = React.useState(false);
+const btnYt = {
+  bgcolor: '#5b4df6',
 
+};
+
+export default function ContentModal( {children, movieId} ) {
+  const [open, setOpen] = useState(false);
+  const [video, setVideo] = useState();
+
+  const type = movieId.release_date ? 'movie' : 'tv';
+
+  const getVideo = async () => {
+
+    await fetch((`https://api.themoviedb.org/3/${type}/${movieId.id}/videos?api_key=${import.meta.env.VITE_API_KEY}`), {
+                method: 'GET',
+            })
+            .then( (res) => res.json())
+            .then((data) => {
+            if (!data.errors) {
+              console.log(data);
+              setVideo(data.results[0]?.key);
+            } else {
+              setVideo([]);
+            }
+          });
+  };
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  useEffect(() => {
+      getVideo();
+  }, []);
 
-
+  console.log(video);
 
   return (
     <div>
@@ -55,6 +81,7 @@ export default function ContentModal( {children, movieId} ) {
         }}
       >
         <Fade in={open}>
+          {children && (
           <Box sx={style}>
             <Box className='modal-container'>
               <div className='modal-img-div'>
@@ -85,18 +112,20 @@ export default function ContentModal( {children, movieId} ) {
                     {movieId.overview}
                   </h5>
                 </div>
-                <button
+                <Button
+                  sx={btnYt}
                   className='modal-yt-btn'
                   variant='contained'
                   target='_blank'
-                  href={`https://www.youtube.com/watch?v=${'video'}`} 
+                  href={`https://www.youtube.com/watch?v=${video}`} 
                 >
                   Obejrzyj zwiastun
-                </button>
+                </Button>
               </div>
               <div className='modal-actors'></div>
             </Box>
           </Box>
+          )}
         </Fade>
       </Modal>
     </div>

@@ -23,7 +23,7 @@ function Banner() {
                 })
                 .then(data => {
                     //console.log(data);
-                    setMovie(data.results[Math.floor(Math.random() * data.results.length -1)]);
+                    setMovie(data?.results[Math.floor(Math.random() * data.results.length -1)]);
                 })
                 .catch(error => {
                     console.error(error);
