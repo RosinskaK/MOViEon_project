@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ModalCredits from './ModalCredits';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -45,7 +46,7 @@ export default function ContentModal( {children, movieId} ) {
             .then( (res) => res.json())
             .then((data) => {
             if (!data.errors) {
-              console.log(data);
+              //console.log(data);
               setVideo(data.results[0]?.key);
             } else {
               setVideo([]);
@@ -60,7 +61,7 @@ export default function ContentModal( {children, movieId} ) {
       getVideo();
   }, []);
 
-  console.log(video);
+  //console.log(video);
 
   return (
     <div>
@@ -122,7 +123,9 @@ export default function ContentModal( {children, movieId} ) {
                   Obejrzyj zwiastun
                 </Button>
               </div>
-              <div className='modal-actors'></div>
+              <div className='modal-actors'>
+                    <ModalCredits movieId={movieId} />
+              </div>
             </Box>
           </Box>
           )}
