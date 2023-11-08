@@ -29,5 +29,7 @@ Now I'm working on adding a modal showing details of a given film and maybe I wo
 
 - Local Storage
 
+- Material UI
+
 <!-- ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) -->
 
