@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ModalCredits from './ModalCredits';
+import GenreMovieTv from './GenreMovieTv';
+
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -7,13 +9,14 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-//import YouTubeIcon from '@mui/icons-material/YouTube';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+
 
 
 
 const baseUrl = "http://image.tmdb.org/t/p/w500/";
 
-//style for Content Modal
+//styles for Content Modal
 const style = {
   position: 'absolute',
   top: '50%',
@@ -29,8 +32,19 @@ const style = {
   borderRadius: '15px',
 };
 
+//styles fo Button MUI
 const btnYt = {
   color: '#ff493b',
+  borderRadius: '30px',
+  border: '3px solid #ff493b',
+  p: '6px 10px',
+  
+  
+  ":hover": {
+    border: '3px solid #ff493b',
+    bgcolor: '#ff493b',
+    color: 'whitesmoke',
+  },
 
 };
 
@@ -129,7 +143,7 @@ export default function ContentModal( {children, movieId} ) {
                     <span className='modal-year-type'>
                       {type2}</span> z {(movieId.release_date || movieId.first_air_date || '---').substring(0,4)}
                     <span className='modal-year-genres'>
-                      gatunki filmowe</span>
+                      g f <GenreMovieTv movieId={movieId}/> </span>
 
                   </h4>
                   <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
@@ -144,7 +158,9 @@ export default function ContentModal( {children, movieId} ) {
                   sx={btnYt}
                   //startIcon={<YouTubeIcon />}
                   className='modal-yt-btn'
+                  startIcon={<YouTubeIcon  size='medium' />}
                   color='error'
+                  size='small'
                   variant='outlined'
                   target='_blank'
                   href={`https://www.youtube.com/watch?v=${video}`} 
