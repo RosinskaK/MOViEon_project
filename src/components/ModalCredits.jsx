@@ -75,7 +75,7 @@ function ModalCredits( { movieId }) {
         </>
         }
     </div>
-  )
+  );
 }
 
 export default ModalCredits;
