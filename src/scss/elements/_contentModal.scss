@@ -63,6 +63,11 @@
 .modal-year-genres {
     padding-left: 15px;
     font-style: italic;
+    font-weight: 700;
+    background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .modal-votes {

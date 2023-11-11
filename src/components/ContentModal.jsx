@@ -142,9 +142,7 @@ export default function ContentModal( {children, movieId} ) {
                   <h4 className='modal-year'>
                     <span className='modal-year-type'>
                       {type2}</span> z {(movieId.release_date || movieId.first_air_date || '---').substring(0,4)}
-                    <span className='modal-year-genres'>
-                      g f <GenreMovieTv movieId={movieId}/> </span>
-
+                    <span className='modal-year-genres'><GenreMovieTv movieId={movieId}/> </span>
                   </h4>
                   <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
                 </div>
