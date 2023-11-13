@@ -46,6 +46,11 @@
         outline: none;
         border-bottom: 2px solid white;
     }
+    input:active {
+        width: 92%;
+        outline: none;
+        border-bottom: 2px solid white;
+    }
 }
 
 .search-results-container {
@@ -58,3 +63,10 @@
 .search-empty-results {
     margin-bottom: 30px;
 }
+
+// input:-internal-autofill-selected {
+//     appearance: none;
+//     background-color: #27282b !important;
+//     background-image: none !important;
+//     color: whitesmoke !important;
+// }

@@ -38,8 +38,6 @@ const btnYt = {
   borderRadius: '30px',
   border: '3px solid #ff493b',
   p: '6px 10px',
-  
-  
   ":hover": {
     border: '3px solid #ff493b',
     bgcolor: '#ff493b',
@@ -133,7 +131,6 @@ export default function ContentModal( {children, movieId} ) {
                 )}
               {/* </div> */}
 
-
               <div className='modal-main-content'>
                 <div>
                   <h1 className='modal-main-title'>
@@ -146,7 +143,6 @@ export default function ContentModal( {children, movieId} ) {
                   </h4>
                   <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
                 </div>
-
                 <div className='modal-description-container'>
                   <h5 className='modal-description'>
                     {movieId.overview}
@@ -156,7 +152,7 @@ export default function ContentModal( {children, movieId} ) {
                   sx={btnYt}
                   //startIcon={<YouTubeIcon />}
                   className='modal-yt-btn'
-                  startIcon={<YouTubeIcon  size='medium' />}
+                  startIcon={<YouTubeIcon />}
                   color='error'
                   size='small'
                   variant='outlined'
@@ -166,11 +162,9 @@ export default function ContentModal( {children, movieId} ) {
                   Zobacz zwiastun
                 </Button>
               </div>
-
               <div className='modal-actors'>
                     <ModalCredits movieId={movieId} />
               </div>
-
             </Box>
           </Box>
           )}

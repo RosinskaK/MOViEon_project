@@ -3,7 +3,7 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 25px 2px;
+    padding: 25px 0;
 
     &::-webkit-scrollbar {
         display: none;
@@ -148,7 +148,8 @@
     @include btnsSecondary();
 
     &:disabled {
-        background-color: rgba(148, 146, 146, 0.716);
+        background-color: $btn-disabled-backgroundcolor;
+        //rgba(148, 146, 146, 0.716)
     }
 }
 

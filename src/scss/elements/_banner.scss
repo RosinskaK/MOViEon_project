@@ -60,7 +60,8 @@
     }
     &:disabled {
         background: transparent;
-        background-color: rgba(148, 146, 146, 0.716);
+        background-color: $btn-disabled-backgroundcolor;
+        //rgba(148, 146, 146, 0.716)
     }
 }
 

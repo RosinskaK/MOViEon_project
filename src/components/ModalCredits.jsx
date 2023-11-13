@@ -35,42 +35,42 @@ function ModalCredits( { movieId }) {
         {credits && 
         <>
             <div className='credits-person'>
-                {credits[0].profile_path ?
+                {credits[0]?.profile_path ?
                 (<img 
-                    src={`${baseUrl}/${credits[0].profile_path}`}
-                    alt={credits[0].name}
+                    src={`${baseUrl}/${credits[0]?.profile_path}`}
+                    alt={credits[0]?.name}
                     className='credits-img'
                 />
                 ) : (
                     <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
                 )}
-                <h6 className='credits-actor-name'>{credits[0].name}</h6>
+                <h6 className='credits-actor-name'>{credits[0]?.name}</h6>
             </div>
 
             <div className='credits-person'>
-                {credits[1].profile_path ?
+                {credits[1]?.profile_path ?
                 (<img 
-                    src={`${baseUrl}/${credits[1].profile_path}`}
-                    alt={credits[1].name}
+                    src={`${baseUrl}/${credits[1]?.profile_path}`}
+                    alt={credits[1]?.name}
                     className='credits-img'
                 />   
                 ) : (
                     <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
                 )}
-                <h6 className='credits-actor-name'>{credits[1].name}</h6>
+                <h6 className='credits-actor-name'>{credits[1]?.name}</h6>
             </div>
 
             <div className='credits-person'>
-                {credits[2].profile_path ?
+                {credits[2]?.profile_path ?
                 (<img 
-                    src={`${baseUrl}/${credits[2].profile_path}`}
-                    alt={credits[2].name}
+                    src={`${baseUrl}/${credits[2]?.profile_path}`}
+                    alt={credits[2]?.name}
                     className='credits-img'
                 />
                 ) : (
                     <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
                 )}
-                <h6 className='credits-actor-name'>{credits[2].name}</h6>
+                <h6 className='credits-actor-name'>{credits[2]?.name}</h6>
             </div>
         </>
         }

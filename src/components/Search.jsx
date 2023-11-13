@@ -28,8 +28,8 @@ function Search() {
 
   };
 
-  console.log(results);
-  console.log(query);
+  //console.log(results);
+  //console.log(query);
 
   return (
     <>

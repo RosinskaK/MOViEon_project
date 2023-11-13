@@ -48,13 +48,13 @@ function Row({ title, fetchUrl, isLargeRow, isFilm, isSerial }) {
           // the naming can be any, depends on you.
           breakpoint: { max: 3000, min: 2000 },
           items: 5,
-          partialVisibilityGutter: 40,
+          partialVisibilityGutter: 30,
           slidesToSlide: 2,
         },
         largDesktop: {
             breakpoint: { max: 2000, min: 1500 },
             items: 4,
-            partialVisibilityGutter: 40,
+            partialVisibilityGutter: 30,
             slidesToSlide: 2,
         },
         desktop: {

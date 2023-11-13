@@ -41,18 +41,19 @@ function GenreMovieTv( {movieId} ) {
 
     //const filter1 = {id: toFilter[0]};
 
-    const filteredData1 = genre?.find((item) => item.id === generesToFind[0] );
+    const filteredData_1 = genre?.find((item) => item.id === generesToFind[0] );
     //Object.keys(filter1).every(key => item[key] === filter1[key])
 
-    console.log(filteredData1);
+    console.log(filteredData_1);
 
-    const filteredData2 = genre?.find((item) => item.id === generesToFind[1] );
+    const filteredData_2 = genre?.find((item) => item.id === generesToFind[1] );
 
-    console.log(filteredData2);
+    console.log(filteredData_2);
 
   return (
     <>
-        {filteredData1?.name}, {filteredData2?.name}
+        {filteredData_1?.name ? filteredData_1?.name : ''} 
+        {filteredData_2?.name ? `, ${filteredData_2?.name}` : ''}
     </>
   );
 }

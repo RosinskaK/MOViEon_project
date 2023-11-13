@@ -47,17 +47,21 @@
 }
 
 .modal-main-title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2vw;
+    line-height: 4.5vh;
 }
 
 .modal-year {
     font-weight: 400;
+    font-size: 1.15vw;
 }
 
 .modal-year-type {
     color: rgb(220, 20, 110);
     padding: 0;
     font-weight: 600;
+    
 }
 
 .modal-year-genres {
@@ -73,6 +77,7 @@
 .modal-votes {
     font-weight: 400;
     margin-top: 10px;
+    font-size: 1vw;
     span {
         font-weight: 700;
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
@@ -92,6 +97,7 @@
     font-weight: 400;
     padding: 20px 18px;
     text-align: justify;
+    font-size: 0.95vw;
 }
 
 .modal-yt-btn {
