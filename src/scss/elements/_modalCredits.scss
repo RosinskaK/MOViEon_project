@@ -5,6 +5,13 @@
     flex-direction: column;
     justify-content: space-between;
     
+    @media screen and (max-width: 812px) {
+        flex-direction: row;
+        margin-top: 15px;
+        
+        justify-content: space-around;
+        max-height: 130px;
+    }
 }
 
 .credits-person {
@@ -30,15 +37,30 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    
+    @media screen and (max-width: 812px) {
+        height: 60px;
+        max-width: 30px;
+    }
 }
 
 .credits-img {
     max-width: 90px;
     border-radius: 5px;
+
+    @media screen and (max-width: 812px) {
+        max-width: 70px;
+    }
 }
 
 .credits-actor-name {
     text-align: center;
     padding-bottom: 3px;
     padding-top: 2px;
+
+    @media screen and (max-width: 812px) {
+        font-size: 9px;
+        max-width: 70px;
+        line-height: 12px;
+    }
 }

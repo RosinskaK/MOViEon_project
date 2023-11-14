@@ -10,31 +10,33 @@
         display: none;
     }
 
-    @media (max-width: 575px) {
-        
-    }
-
-    @media (max-width: 575px) {
-        
+    @media screen and (max-width: 812px) {
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
-
-
 
 .modal-img-upright {
     object-fit: contain;
 
+    @media screen and (max-width: 812px) {
+        object-fit: contain;
+        display: none;
+    }
 }
 
 .modal-img-horizontally {
     object-fit: contain;
     display: none;
 
+    @media screen and (max-width: 812px) {
+        object-fit: contain;
+        display: inherit;
+    }
 }
 
 .modal-no-image {
     font-family: 'Poppins', sans-serif;
-
 }
 
 .modal-main-content {
@@ -44,24 +46,38 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 812px) {
+        margin: 0;
+    }
 }
 
 .modal-main-title {
     margin-bottom: 20px;
     font-size: 2vw;
     line-height: 4.5vh;
+
+    @media screen and (max-width: 812px) { 
+        margin-bottom: 8px;
+        margin-top: 8px;
+        line-height: 20px;
+        font-size: 15px;
+    }
 }
 
 .modal-year {
     font-weight: 400;
     font-size: 1.15vw;
+
+    @media screen and (max-width: 812px) { 
+        font-size: 10px;
+    }
 }
 
 .modal-year-type {
     color: rgb(220, 20, 110);
     padding: 0;
-    font-weight: 600;
-    
+    font-weight: 600; 
 }
 
 .modal-year-genres {
@@ -85,12 +101,27 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    
+    @media screen and (max-width: 812px) { 
+        margin-top: 5px;
+        font-size: 8px;
+    }
 }
 
 .modal-description-container {
     background-color: $backgroundcolor-btns-navbar;
     margin: 10px 0;
     border-radius: 15px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media screen and (max-width: 812px) {
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
 }
 
 .modal-description {
@@ -98,10 +129,15 @@
     padding: 20px 18px;
     text-align: justify;
     font-size: 0.95vw;
+
+    @media screen and (max-width: 812px) {
+        padding: 10px 8px;
+        font-size: 8px;
+    }
 }
 
-.modal-yt-btn {
-    bottom: 0;
-}
+// .modal-yt-btn {
+//     bottom: 0;
+// }
 
 
