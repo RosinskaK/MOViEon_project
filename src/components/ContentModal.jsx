@@ -109,7 +109,7 @@ export default function ContentModal( {children, movieId} ) {
                     style={{borderRadius: '7px'}}
                   />
                   ) : (
-                  <div className="modal-no-image">
+                  <div className="modal-no-image-upright">
                     <p>There is no image</p>
                     <h2>Sorry!</h2>
                   </div>
@@ -124,7 +124,7 @@ export default function ContentModal( {children, movieId} ) {
                     style={{borderRadius: '7px'}}
                   />
                   ) : (
-                  <div className="modal-no-image">
+                  <div className="modal-no-image-horizontally">
                     <p>There is no image</p>
                     <h2>Sorry!</h2>
                   </div>

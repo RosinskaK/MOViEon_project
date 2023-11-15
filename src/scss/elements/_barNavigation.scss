@@ -44,36 +44,43 @@
 
 .nav-left-icons {
     display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .nav-left-icon {
     margin-left: 1rem;
+
+    @media screen and (max-width: 471px) {
+        margin-left: 3px;
+    }
 }
 
 .nav-right-icons {
     display: flex;
+    flex-wrap: wrap;
 }
 
 
 
-// @keyframes hello {
-//     from {
-//         transform: rotateY(0deg);
-//       }
-//       to {
-//         transform: rotateY(360deg);
-//       }
-//   }
+@keyframes hello {
+    from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+  }
 
 .nav-hello {
     margin-right: 1rem;
     margin-top: 0.6rem;
     text-shadow: 1px 1px 2px black;
 
-    // animation-name: hello;
-    // animation-duration: 1.5s;
-    // //animation-delay: 2s;
-    // animation-timing-function: ease-in-out;
+    animation-name: hello;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
     // animation-iteration-count: 2;
 
 }

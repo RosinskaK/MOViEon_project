@@ -31,7 +31,7 @@
     p {
         padding: 0 5px;
         font-weight: 700;
-        font-size: 1vw;
+        font-size: 0.8rem;
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
         background-clip: text;
         -webkit-background-clip: text;
@@ -39,8 +39,8 @@
     }
     
     @media screen and (max-width: 812px) {
-        height: 60px;
-        max-width: 30px;
+        height: 105px;
+        max-width: 70px;
     }
 }
 

@@ -35,8 +35,51 @@
     }
 }
 
-.modal-no-image {
+.modal-no-image-upright {
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom right,#5b4df6,#ff493b);
+
+    p {
+        margin: 30px 45px;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+    @media screen and (max-width: 812px) {
+        display: none;
+    }
+}
+
+.modal-no-image-horizontally {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-image: linear-gradient(to bottom right, #5b4df6,#ff493b);
+    display: none;
+
+    p {
+        margin: 20px 15px;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    @media screen and (max-width: 812px) {
+        display: inherit;
+    }
 }
 
 .modal-main-content {
