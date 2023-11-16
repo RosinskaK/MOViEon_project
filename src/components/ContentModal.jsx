@@ -150,7 +150,7 @@ export default function ContentModal( {children, movieId} ) {
                 </div>
                 <Button
                   sx={btnYt}
-                  //className='modal-yt-btn'
+                  className='modal-yt-btn'
                   startIcon={<YouTubeIcon />}
                   color='error'
                   size='small'

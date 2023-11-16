@@ -1,5 +1,6 @@
 .modal-container {
     display: flex;
+    justify-content: space-between;
     //padding: 10px;
     height: 100%;
     width: 100%;
@@ -179,8 +180,37 @@
     }
 }
 
-// .modal-yt-btn {
-//     bottom: 0;
-// }
+
+//------------------ animation for YT btn ------------------------------
+.modal-yt-btn {
+  -webkit-animation: tada 0.4s;
+  animation: tada 0.4s;
+  animation-delay: 1.5s;
+  animation-iteration-count: 3;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        transform: translate(0px, 0px);
+      }
+      50%{
+        transform: translate(0px, -8px); 
+      }
+     100% {
+        transform: translate(0px, 0px);
+      }
+}
+    
+  @keyframes tada {
+    0% {
+        transform: translate(0px, 0px);
+      }
+      50%{
+        transform: translate(0px, -8px); 
+      }
+     100% {
+        transform: translate(0px, 0px);
+      }
+  }
 
 

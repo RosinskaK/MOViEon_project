@@ -9,7 +9,7 @@
         flex-direction: row;
         margin-top: 15px;
         
-        justify-content: space-around;
+        justify-content: space-between;
         max-height: 130px;
     }
 }
@@ -29,7 +29,7 @@
     border-radius: 5px;
     text-align: center;
     p {
-        padding: 0 5px;
+        padding: 0 18px;
         font-weight: 700;
         font-size: 0.8rem;
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
@@ -54,6 +54,7 @@
 }
 
 .credits-actor-name {
+    max-width: 90px;
     text-align: center;
     padding-bottom: 3px;
     padding-top: 2px;
