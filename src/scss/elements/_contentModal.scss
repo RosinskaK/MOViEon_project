@@ -98,23 +98,28 @@
 
 .modal-main-title {
     margin-bottom: 20px;
-    font-size: 2vw;
-    line-height: 4.5vh;
+    font-size: 30px;
+    line-height: 38px;
 
     @media screen and (max-width: 812px) { 
         margin-bottom: 8px;
         margin-top: 8px;
-        line-height: 20px;
         font-size: 15px;
+        line-height: 20px;
+    }
+
+    @media screen and (min-width: 813px) and (max-width: 1040px){ 
+        font-size: 23px;
+        line-height: 30px;
     }
 }
 
 .modal-year {
     font-weight: 400;
-    font-size: 1.15vw;
+    font-size: 18px;
 
     @media screen and (max-width: 812px) { 
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
@@ -137,7 +142,7 @@
 .modal-votes {
     font-weight: 400;
     margin-top: 10px;
-    font-size: 1vw;
+    font-size: 15px;
     span {
         font-weight: 700;
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
@@ -148,7 +153,7 @@
     
     @media screen and (max-width: 812px) { 
         margin-top: 5px;
-        font-size: 8px;
+        font-size: 9px;
     }
 }
 
@@ -172,11 +177,15 @@
     font-weight: 400;
     padding: 20px 18px;
     text-align: justify;
-    font-size: 0.95vw;
+    font-size: 15px;
+
+    @media screen and (min-width: 813px) and (max-width: 1040px){ 
+        font-size: 12px;
+    }
 
     @media screen and (max-width: 812px) {
         padding: 10px 8px;
-        font-size: 8px;
+        font-size: 9px;
     }
 }
 
@@ -185,7 +194,7 @@
 .modal-yt-btn {
   -webkit-animation: tada 0.4s;
   animation: tada 0.4s;
-  animation-delay: 1.5s;
+  animation-delay: 3.0s;
   animation-iteration-count: 3;
 }
 
