@@ -23,7 +23,7 @@ function Banner() {
                 })
                 .then(data => {
                     //console.log(data);
-                    setMovie(data?.results[Math.floor(Math.random() * data.results.length -1)]);
+                    setMovie(data?.results[Math.floor(Math.random() * data?.results.length -1)]);
                 })
                 .catch(error => {
                     console.error(error);
@@ -43,7 +43,7 @@ function Banner() {
 ////////global context mylist stored movies
     const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
-    let storedMovie = mylist.find(o => o.id === movie.id);
+    let storedMovie = mylist.find(o => o.id === movie?.id);
 
     const mylistDisabled = storedMovie ? true : false;
 

@@ -30,7 +30,6 @@ function BarNavigation () {
         return;
     }
 
-
     const handleNavigateHome = () => {
 
         navigate('/');
@@ -43,16 +42,42 @@ function BarNavigation () {
       return;
     }
 
+    //console.log(window.location.pathname);
+
+    const pathname = window.location.pathname;
+    
+    const currentPage_1 = pathname === '/';
+    const currentPage_2 = pathname === '/mylist';
+    const currentPage_3 = pathname === '/search';
+
+    const color_1 = 'linear-gradient(233.25deg,#4d3fe9,#f13d30)';
+    const color_2 = 'rgba(21, 21, 42, 0.3';
 
     return (
         <div className={`nav-main-container ${show && 'nav-black'}`}>
             <div className="nav-left-icons">
                 <h1 className="nav-logo"><Link to='/' className='logo-link'>MOV<span>i</span>E<span>on</span></Link></h1>
-                <button onClick={handleNavigateHome} className="nav-left-icon nav-btns">Strona główna</button>
-                <button onClick={handleNavigateMyList} className="nav-left-icon nav-btns">Moja lista</button>
+                <button 
+                onClick={handleNavigateHome} 
+                className="nav-left-icon nav-btns"
+                style={{ backgroundImage: currentPage_1 ? color_1 : color_2}}
+                >
+                    Strona główna
+                </button>
+                <button 
+                onClick={handleNavigateMyList} 
+                className="nav-left-icon nav-btns"
+                style={{ backgroundImage: currentPage_2 ? color_1 : color_2}}
+                >
+                    Moja lista
+                </button>
             </div>
             <div className="nav-right-icons">
-                <button onClick={handleNavigateToSearch} className="nav-btn-search nav-btns">
+                <button 
+                onClick={handleNavigateToSearch} 
+                className="nav-btn-search nav-btns"
+                style={{ backgroundImage: currentPage_3 ? color_1 : color_2}}
+                >
                     {/* tu jest ikonka lupka */}
                     <svg xmlns="http://www.w3.org/2000/svg" height="17px" viewBox="0 0 512 512" style={{fill: 'white'}}>
                     {/* <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
