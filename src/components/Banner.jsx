@@ -33,14 +33,16 @@ function Banner() {
 
     }, []);
 
-    console.log(movie);
+    //console.log(movie);
 
-    // ograniczanie ilości teksu w div do 150 znaków - patrz na dole
+    // limiting the amount of text in a div to n characters - see below
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
 
-////////global context mylist stored movies
+
+    //global context - mylist stored movies
+
     const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
     let storedMovie = mylist.find(o => o.id === movie?.id);
@@ -52,9 +54,7 @@ function Banner() {
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: `url(
-                'http://image.tmdb.org/t/p/original/${movie?.backdrop_path}'
-            )`,
+            backgroundImage: `url('http://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
             backgroundPosition: 'top center',
         }}
     > 
@@ -65,7 +65,9 @@ function Banner() {
                 className='banner-btn'
                 disabled={mylistDisabled}
                 onClick={() => addMovieToMylist(movie)}
-                >+ Moja lista</button>
+                >
+                    + Moja lista
+                </button>
                 <ContentModal movieId={movie}>
                     <button className='banner-btn'>Więcej</button>
                 </ContentModal>

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 
 
@@ -10,13 +9,12 @@ function BarNavigation () {
     const [show, setShow] = useState(false);
 
     useEffect(() =>{
-
         //nazwa dla funkcji żeby nie była anonimowa wtedy można prawidłowo użyć remove listenera
         const scrollListener = () => {
             if (window.scrollY > 100) {
                 setShow(true); 
             } else setShow(false);
-    }
+        }
 
         window.addEventListener('scroll', scrollListener);
         return () => window.removeEventListener('scroll', scrollListener);
@@ -42,8 +40,9 @@ function BarNavigation () {
       return;
     }
 
+    //selecting the current page in nav bar with color for btns
+    
     //console.log(window.location.pathname);
-
     const pathname = window.location.pathname;
     
     const currentPage_1 = pathname === '/';
