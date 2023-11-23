@@ -60,7 +60,7 @@ function Row({ title, fetchUrl, isLargeRow, isFilm, isSerial }) {
         desktop: {
           breakpoint: { max: 1500, min: 1150 },
           items: 3,
-          partialVisibilityGutter: 20,
+          partialVisibilityGutter: 30,
         },
         tablet: {
           breakpoint: { max: 1150, min: 500 },

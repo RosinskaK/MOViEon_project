@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
-const baseUrl = "http://image.tmdb.org/t/p/w500/";
+const baseUrl = "http://image.tmdb.org/t/p/original/";
 
 
 //styles for ContentModal
@@ -29,7 +29,7 @@ const style = {
   borderRadius: '15px',
 };
 
-//styles fo Button MUI
+//styles fo Button MUI - link to Youtube
 const btnYt = {
   color: '#ff493b',
   borderRadius: '30px',
@@ -97,10 +97,10 @@ export default function ContentModal( {children, movieId} ) {
           <Box sx={style}>
             <Box className='modal-container'>
               {/* <div className='modal-img-upright'> */}
-                {movieId.poster_path ? (
+                {movieId?.poster_path ? (
                   <img
-                    src={`${baseUrl}${movieId.poster_path}`}
-                    alt={movieId.title ||  movieId.name}
+                    src={`${baseUrl}${movieId?.poster_path}`}
+                    alt={movieId?.title ||  movieId?.name}
                     className='modal-img-upright'
                     style={{borderRadius: '7px'}}
                   />
@@ -114,8 +114,8 @@ export default function ContentModal( {children, movieId} ) {
               {/* <div className='modal-img-horizontally'> */}
                 {movieId.backdrop_path ? (
                   <img
-                    src={`${baseUrl}${movieId.backdrop_path}`}
-                    alt={movieId.title ||  movieId.name}
+                    src={`${baseUrl}${movieId?.backdrop_path}`}
+                    alt={movieId?.title ||  movieId?.name}
                     className='modal-img-horizontally'
                     style={{borderRadius: '7px'}}
                   />
@@ -134,14 +134,14 @@ export default function ContentModal( {children, movieId} ) {
                   </h1>
                   <h4 className='modal-year'>
                     <span className='modal-year-type'>
-                      {type2}</span> z {(movieId.release_date || movieId.first_air_date || '---').substring(0,4)}
+                      {type2}</span> z {(movieId?.release_date || movieId?.first_air_date || '---').substring(0,4)}
                     <span className='modal-year-genres'><GenreMovieTv movieId={movieId}/> </span>
                   </h4>
                   <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
                 </div>
                 <div className='modal-description-container'>
                   <h5 className='modal-description'>
-                    {movieId.overview}
+                    {movieId?.overview}
                   </h5>
                 </div>
                 <Button

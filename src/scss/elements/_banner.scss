@@ -1,6 +1,10 @@
 .banner {
     object-fit: contain;
     height: 630px;
+
+    @media screen and (min-width: 1600px) {
+        height: 930px;
+    }
 }
 
 .banner-contents {
