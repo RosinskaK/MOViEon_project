@@ -2,10 +2,8 @@ import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 import BarNavigation from './BarNavigation';
-//import soon from '/soon.png'; usunac
 import Footer from './Footer';
 import SingleCardMyList from './SingleCardMyList';
-
 
 
 function MyList() {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 
 const baseUrl = 'https://image.tmdb.org/t/p/w200/';
@@ -6,7 +6,8 @@ const baseUrl = 'https://image.tmdb.org/t/p/w200/';
 function ModalCredits( { movieId }) {
     const [credits, setCredits] = useState();
 
-    const type = movieId.release_date ? 'movie' : 'tv';
+    const type = movieId?.release_date ? 'movie' : 'tv';
+
 
     const getCredits = async () => {
 
@@ -16,7 +17,7 @@ function ModalCredits( { movieId }) {
             .then( (res) => res.json())
             .then((data) => {
             if (!data.errors) {
-                console.log(data);
+                //console.log(data);
                 setCredits(data.cast);
             } else {
                 setCredits([]);
@@ -24,11 +25,12 @@ function ModalCredits( { movieId }) {
             });
     };
 
-    console.log(credits);
+    //console.log(credits);
 
     useEffect(() => {
         getCredits();
     }, []);
+
 
   return (
     <div className='credits-container'>

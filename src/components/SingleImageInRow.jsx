@@ -5,7 +5,7 @@ import ContentModal from './ContentModal';
 
 const baseUrl = 'http://image.tmdb.org/t/p/original/';
 
-// ograniczanie ilości teksu w div do określonej ilości znaków - patrz na dole
+// limiting the amount of text in a div to n characters - see below
 function truncate(str, n) {
   return str?.length > n ? str.substr(0, n - 1) + '...' : str;
 }
@@ -13,14 +13,12 @@ function truncate(str, n) {
 
 function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name, release_date, first_air_date, overview, isFilm,isSerial, movie} ) {
 
-///////////////////////////////////////////
-const { addMovieToMylist, mylist } = useContext(GlobalContext);
+  const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
   let storedMovie = mylist.find(o => o.id === movie.id);
 
   const mylistDisabled = storedMovie ? true : false;
 
-///////////////////////////////////////////
 
   return (
     <div className="row-posters scroll-moz">
@@ -40,7 +38,6 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
               {isLargeRow ? overview : truncate(overview, 90)}
             </p>
           <div className='btn-div-hover'>
-            {/* <button className='image-hover-btn single-img-btn-one'>Zwiastun</button> */}
             <button 
               className='image-hover-btn'
               disabled={mylistDisabled}
@@ -58,28 +55,3 @@ const { addMovieToMylist, mylist } = useContext(GlobalContext);
 }
 
 export default SingleImageInRow;
-
-
-//release_date - jest do filmu
-//first_air_date - jest do serialu
-//name jest do serialu a title jest do filmu
-
-
-
-//return (
-//     <div className="row-container">
-//     <h2 className="row-title">{title}</h2> 
-//     <div className="row-posters scroll-moz">
-//         {
-//             movies && movies.map(item => {
-//                return <img 
-//                className={`row-poster ${isLargeRow && 'row-posterLarge'}`}
-//                key={item.id} 
-//                src={`${baseUrl}${isLargeRow ? item?.poster_path : item?.backdrop_path}`} 
-//                alt={item.title} 
-//                />
-//             })
-//         }
-//     </div>
-// </div>
-// );

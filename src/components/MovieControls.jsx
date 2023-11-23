@@ -2,10 +2,13 @@ import React, {useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import ContentModal from './ContentModal';
 
+//scss classes for MovieControls are in _singleCardSearch.scss
+
 
 function MovieControls({ movie, type }) {
 
     const {removeMovieFromMylist} = useContext(GlobalContext);
+
 
   return (
     <div className='moviecontrols-main'>
@@ -15,13 +18,11 @@ function MovieControls({ movie, type }) {
         >
           - Moja lista
         </button >
-        {/* <button>Zwiastun</button> */}
         <ContentModal movieId={movie}>
           <button className='moviecontrols-btn'>Więcej</button>
         </ContentModal>
-
     </div>
-  )
+  );
 }
 
 export default MovieControls;

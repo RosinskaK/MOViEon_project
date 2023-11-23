@@ -1,8 +1,3 @@
-import { useEffect, useState } from "react";
-
-
-//import { useNavigate } from "react-router-dom";
-
 import BarNavigation from "./BarNavigation";
 import Banner from "./Banner";
 import Row from "./Row";
@@ -53,5 +48,3 @@ function Home() {
 }
 
 export default Home;
-
-

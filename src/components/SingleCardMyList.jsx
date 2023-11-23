@@ -1,13 +1,14 @@
 import React from 'react';
 import MovieControls from './MovieControls';
 
+//scss classes for SingleCardMyList are in _singleCardSearch.scss
 
 const baseUrl = "http://image.tmdb.org/t/p/original/";
 
 
-//mozliwe ze props type nie bedzie potrzebny
-
 function SingleCardMyList({ movie, type }) {
+
+
   return (
     <div className="card-main card-mylist-main">
       <div className="card-image">

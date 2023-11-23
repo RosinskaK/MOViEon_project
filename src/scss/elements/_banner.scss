@@ -11,6 +11,10 @@
     margin-left: 30px;
     padding-top: 240px;
    // height: 190px;
+
+   @media screen and (min-width: 1600px) {
+    padding-top: 540px;
+    }
 }
 
 .banner-title {
@@ -18,7 +22,6 @@
     font-weight: 700;
     padding-bottom: 0.3rem;
     text-shadow: 1px 1px 5px black;
-    
 }
 
 .banner-description {

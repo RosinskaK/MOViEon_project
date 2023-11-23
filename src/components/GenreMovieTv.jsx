@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 function GenreMovieTv( {movieId} ) {
     const [genre, setGenre] = useState();
 
-    const type = movieId.release_date ? 'movie' : 'tv';
+    const type = movieId?.release_date ? 'movie' : 'tv';
 
     const getGenres = async () => {
 
@@ -15,40 +15,34 @@ function GenreMovieTv( {movieId} ) {
             .then( (res) => res.json())
             .then((data) => {
             if (!data.errors) {
-                console.log(data);
+                //console.log(data);
                 setGenre(data.genres);
             } else {
                 setGenre([]);
             }
             });
     };
-
-    console.log(genre);
+    //console.log(genre);
 
     useEffect(() => {
         getGenres();
     }, []);
 
 
-    const generesToFind = movieId.genre_ids.slice(0,2);
+// limiting the number of movie/tv genres shown in the modal to two
 
-    console.log(generesToFind);
-
-    // const toFilter = generesToFind.map(num => parseInt(num));
-
-    // console.log(toFilter);
+    const generesToFind = movieId?.genre_ids.slice(0,2);
+    //console.log(generesToFind);
 
 
-    //const filter1 = {id: toFilter[0]};
+//matching the movie/tv genre number to the genre name from the fetched genre list in useState
 
     const filteredData_1 = genre?.find((item) => item.id === generesToFind[0] );
-    //Object.keys(filter1).every(key => item[key] === filter1[key])
-
-    console.log(filteredData_1);
+    //console.log(filteredData_1);
 
     const filteredData_2 = genre?.find((item) => item.id === generesToFind[1] );
+    //console.log(filteredData_2);
 
-    console.log(filteredData_2);
 
   return (
     <>
@@ -59,12 +53,3 @@ function GenreMovieTv( {movieId} ) {
 }
 
 export default GenreMovieTv;
-
-
-//<div>
-// {
-//     movieId.genre_ids && movieId.genre_ids.slice(0,2).map((genre, i) => (
-//         <div key={i}> {genre} </div>
-//     ))
-//     }
-//     </div>

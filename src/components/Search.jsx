@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-//import { useNavigate } from "react-router-dom";
 import BarNavigation from './BarNavigation';
 import SingleCardSearch from './SingleCardSearch';
 import Footer from './Footer';
