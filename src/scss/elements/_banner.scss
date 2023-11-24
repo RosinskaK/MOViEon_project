@@ -22,6 +22,11 @@
     font-weight: 700;
     padding-bottom: 0.3rem;
     text-shadow: 1px 1px 5px black;
+
+    @media screen and (max-width: 520px) {
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+    }
 }
 
 .banner-description {

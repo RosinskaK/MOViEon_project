@@ -52,19 +52,19 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
           slidesToSlide: 2,
         },
         desktop: {
-          breakpoint: { max: 1500, min: 1150 },
+          breakpoint: { max: 1500, min: 1050 },
           items: 3,
           partialVisibilityGutter: 30,
         },
         tablet: {
-          breakpoint: { max: 1150, min: 500 },
+          breakpoint: { max: 1050, min: 700 },
           items: 2,
-          partialVisibilityGutter: 100,
+          partialVisibilityGutter: 60,
         },
         mobile: {
-          breakpoint: { max: 500, min: 0 },
+          breakpoint: { max: 700, min: 0 },
           items: 1,
-          partialVisibilityGutter: 20,
+          partialVisibilityGutter: 100,
         }
       };
 

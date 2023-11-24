@@ -141,7 +141,7 @@ export default function ContentModal( {children, movieId} ) {
                 </div>
                 <div className='modal-description-container'>
                   <h5 className='modal-description'>
-                    {movieId?.overview}
+                    {movieId?.overview !== '' ? movieId.overview : 'Sorry, there is no description...'}
                   </h5>
                 </div>
                 <Button

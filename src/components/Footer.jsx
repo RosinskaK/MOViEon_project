@@ -9,7 +9,7 @@ function Footer() {
 
 
   return (
-    <div className='footer'>
+    <footer className='footer'>
         <div className='footer-container'>
             <div className='footer-logos'>
                 <div className='footer-logo-1'>
@@ -29,7 +29,7 @@ function Footer() {
             </div>
         </div>
         <div className='footer-copyright'>Created by <span>&copy;Kasia Rosińska</span></div>
-    </div>
+    </footer>
   );
 }
 

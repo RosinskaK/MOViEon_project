@@ -50,11 +50,18 @@ function Banner() {
     const mylistDisabled = storedMovie ? true : false;
 
 
+    const image = movie?.backdrop_path === null;
+    //console.log(movie?.backdrop_path);
+    //console.log(image);
+
+
   return (
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: `url('http://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
+            backgroundImage: image ? ('linear-gradient(90deg, rgba(91, 77, 246, 1) 0%, rgba(255, 255, 255, 1) 100%)'
+            ) : (
+            `url('http://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`),
             backgroundPosition: 'top center',
         }}
     > 

@@ -50,7 +50,7 @@ function BarNavigation () {
     const currentPage_3 = pathname === '/search';
 
     const color_1 = 'linear-gradient(233.25deg,#4d3fe9,#f13d30)';
-    const color_2 = 'rgba(21, 21, 42, 0.3';
+    const color_2 = 'rgba(21, 21, 42, 0.3)';
 
     return (
         <div className={`nav-main-container ${show && 'nav-black'}`}>

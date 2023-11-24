@@ -42,7 +42,7 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
               className='image-hover-btn'
               disabled={mylistDisabled}
               onClick={() => addMovieToMylist(movie)}
-            >+ Moja lista
+            > + Moja lista
             </button>
             <ContentModal movieId={movie}>
               <button className='image-hover-btn single-img-btn-three'>Więcej</button>
