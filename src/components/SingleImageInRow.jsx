@@ -23,11 +23,21 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
   return (
     <div className="row-posters scroll-moz">
       <div className={`row-poster ${isLargeRow && 'row-posterLarge'}`}>
+        {backdrop_path !== null ? 
         <img 
           className={`single-image ${isLargeRow && 'single-imageLarge'}`}
           src={`${baseUrl}${isLargeRow ? poster_path : backdrop_path}`} 
           alt={isFilm ? title : name} 
-        />
+        /> : poster_path !== null ? 
+        <img 
+          className={`single-image ${isLargeRow && 'single-imageLarge'}`}
+          src={`${isLargeRow ? `${baseUrl}${poster_path}` : "/NoImage.png"}`} 
+        /> 
+        : 
+        <img 
+          src="/NoImage.png" 
+          className={`single-image ${isLargeRow && 'single-imageLarge'}`}
+        />}
         <div className={`single-image-hover ${isLargeRow && 'single-image-hoverLarge'}`}>
           <h3 className='image-hover-title'>{isFilm ? title : name} {isSerial ? name : ""}</h3>
           <p className='image-hover-type-date'>
