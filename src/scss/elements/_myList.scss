@@ -5,28 +5,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 55px;
+    
 }
 
 .mylist-lettering {
     width: 90%;
-    height: 100%;
+    //height: 100%;
     text-align: center;
-    padding-top: 130px;
-    padding-bottom: 30px;   
+    padding-top: 7.6rem;
+    padding-bottom: 3rem;   
 
         h1 {
-        padding-bottom: 30px;
+        padding-bottom: 2rem;
     }
 }
 
 .mylist-movies-counter {
-    width: 90%;
+    width: 100%;
     text-align: right;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
     
     span{
         font-weight: 600;
+        font-size: 1.2rem;
         background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
         background-clip: text;
         -webkit-background-clip: text;
@@ -41,8 +44,8 @@
 }
 
 .mylist-films-container {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +54,9 @@
 
 .mylist-empty-list {
     width: 100%;
-    padding-top: 90px;
-    padding-bottom: 56px;
+    height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     text-align: center;
+    flex-grow: 1;
 }
