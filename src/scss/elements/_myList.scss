@@ -1,16 +1,14 @@
 .mylist {
     width: 100vw;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .mylist-lettering {
     width: 90%;
-    //height: 100%;
     text-align: center;
     padding-top: 7.6rem;
     padding-bottom: 3rem;   
@@ -41,6 +39,7 @@
     width: 90%;
     display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 
 .mylist-films-container {
@@ -54,9 +53,7 @@
 
 .mylist-empty-list {
     width: 100%;
-    height: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: center;
-    flex-grow: 1;
 }

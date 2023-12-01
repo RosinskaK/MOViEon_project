@@ -1,14 +1,14 @@
 .footer {
-    height: 250px;
+    height: 16rem;
     width: 100vw;
-
     display: flex;
     flex-direction: column;
 }
 
 .footer-container {
     display: flex;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 2.5rem;
     
     @media screen and (max-width: 500px) {
         flex-direction: column;
@@ -18,8 +18,12 @@
 }
 
 .footer-logos {
-    margin-left: 2em;
-    padding-top: 3em;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2.5rem;
 
     @media screen and (max-width: 500px) {
         text-align: center;
@@ -34,7 +38,6 @@
 
 .footer-logo-movieon {
     margin-right: 1rem;
-
     font-size: 1.7rem;
     font-style: italic;
 
@@ -47,10 +50,10 @@
 }
 
 .footer-descriptions {
-    padding-top: 6em;
-    font-size: 0.8rem;
-    width: 80vw;
+    font-size: 0.9rem;
+    width: 80%;
     text-align: center;
+    padding-top: 2.5rem;
 
     @media screen and (max-width: 500px) {
         padding-top: 2em;
@@ -58,12 +61,13 @@
 }
 
 .footer-socialIcons {
-    width: 140px;
-    //padding-left: 10px;
-    padding-top: 40px;
-
+    width: 15%;
     display: flex;
     flex-direction: column;
+    align-items:end;
+    justify-content: center;
+    padding-right: 2.5rem;
+
     @media screen and (max-width: 500px) {
         flex-direction: row;
         justify-content: center;
@@ -100,7 +104,7 @@
 // --------------------------------------------------------------------
 
 .footer-copyright {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1.5rem;
     text-align: center;
 

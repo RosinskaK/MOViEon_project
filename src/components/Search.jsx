@@ -9,7 +9,6 @@ function Search() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
-
   const onChange = (e) => {
     e.preventDefault();
 
@@ -24,14 +23,12 @@ function Search() {
         setResults([]);
       }
     });
-
   };
 
   //console.log(results);
   //console.log(query);
 
   return (
-    <>
      <div className='search-main'>
         <BarNavigation />
         <div className='search-container'>
@@ -48,16 +45,15 @@ function Search() {
             {results.length > 0 ? (
               results.map(movie => (
                 <SingleCardSearch key={movie.id} movie={movie} />
-                ))
+              ))
             ) : ( 
             <h2 className='search-empty-results'>Tutaj szukaj swoich ulubionych filmów!</h2>
               )
             }
           </div>
         </div>
+        <Footer/>
      </div>
-     <Footer/>
-    </>
   );
 }
 
