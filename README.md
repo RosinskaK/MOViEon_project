@@ -1,8 +1,8 @@
-# MOViEon app
+# <img src='./public/logoApp.png' alt="screenshot" width="75" height="auto" /> MOViEon app
 Great news! MOViEon is finally done!🎉🎊
 
 The MOViEon project is a movie website similar to streaming services like Netflix and SkyShowTime, it downloads data about movies and series from <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noreferrer" rel="noopener"> TheMovieDb API </a>, recommends film premieres and the most popular films and series rated by TMDB users.
-MOViEon allows user to store selected movies and series by adding them to the created My List. It allows to search for movies in the provided search engine. Has also a module showing details of a given movie or series along with a link to the trailer on YouTube.
+MOViEon allows user to store selected movies and series by adding them to the created My List. It allows to search for movies in the provided search engine. Has also a mododal showing details of a given movie or series along with a link to the trailer on YouTube.
 
 <!-- So My list (a database storing a list of favorite films) is working fine and search engine for movies too.
 Now I'm working on adding a modal showing details of a given film and maybe I would also add a link to the movies trailers on YouTube 😁
@@ -31,7 +31,7 @@ Now I'm working on adding a modal showing details of a given film and maybe I wo
 Primarily I created MOViEon to learn how to communicate with the API database, practice fetching and learn more about JS promises and try to create a large project based on React.js on my own. 
 But MOViEon is more than that. I tried to make it user-friendly and attractive in appearance. It not only shows newest movies or top rated movies or series but it also gives the opportunity to use a saveable My List, according to the user's preferences. 
 
-To construct MOViEon, I used React.js components, SCSS, Vite, Context API - transfers data globally, Local Storage - stores data saved in My List, npm Styled Components - carousels on the home page, Material UI - modal with a description for each movie or series and links to trailers on YouTube.
+To construct MOViEon, I used React.js components, SCSS for styling, Vite, Context API - transfers data globally, Local Storage - stores data saved in My List, npm Styled Components - carousels on the home page, Material UI - modal with a description for each movie or series and links to trailers on YouTube.
 
 
 ## Table of Contents
@@ -47,7 +47,10 @@ To construct MOViEon, I used React.js components, SCSS, Vite, Context API - tran
 
 ## Usage
 
-My list is a storage where user can save his chosen movies or series according to his/her needs. These may be movies that he/her has already watched and wants to keep a list of watched movies or it can be a list of his/hers favourites or a list of movies yet to watch. The choice of use is entirely given to the user. The shared movie search engine is helpful in the process of creating it. TMDB's movie database is large and will definitely allow to find another movie worth watching 😉
+Usage is really easy. Visit home page of MOViEon to learn about the latest film trends and series of the cinema market. 
+Click *Więcej* button to read the description of the selected movie/series, find out about its three main actors, year of production, film genres and take a look at the trailer if it interests you enough. 
+Button *+ Moja lista* allows to add every showed movie/series to My list. LocalStorage is responsible for storing the data saved there. The data is not deleted when the browser is closed, and are available for future sessions with no expiration date. My list is a storage where user can save his chosen movies or series according to his/her needs. These may be movies that he/her has already watched and wants to keep a list of watched movies or it can be a list of favourites or a list of movies yet to watch. List is editable, user can delete saved movies from it any time by using *- Moja lista* button. The choice of use is entirely given to the user. The shared movie search engine is helpful in the process of creating it. TMDB's movie database is large and will definitely allow to find another movie worth watching 😉 Search engine can be found on search page under the magnifying glass icon in the navigation bar.
+To sum up, find a movie, watch trailer or save it on My List and move on to the searching of the next one 🎬🎞
 
 
 ## Technologies Used
@@ -66,9 +69,9 @@ My list is a storage where user can save his chosen movies or series according t
 
 ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
 
-- Context API
+Context API
 
-- Local Storage
+Local Storage
 
 
 ## Setup
