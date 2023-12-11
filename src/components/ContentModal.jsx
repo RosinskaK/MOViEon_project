@@ -42,19 +42,37 @@ const btnYt = {
   },
 };
 
-export default function ContentModal( {children, movieId} ) {
+export default function ContentModal( { movieId, children } ) {
   const [open, setOpen] = useState(false);
   const [video, setVideo] = useState();
 
-  const type = movieId.release_date ? 'movie' : 'tv';
-  const type2 = movieId.release_date ? 'Film' : 'Serial';
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  const getVideo = async () => {
 
-    await fetch((`https://api.themoviedb.org/3/${type}/${movieId.id}/videos?api_key=${import.meta.env.VITE_API_KEY}`), {
+  const type = movieId?.release_date ? 'movie' : 'tv';
+  const type2 = movieId?.release_date ? 'Film' : 'Serial';
+
+
+  //preventing forwarding undefined value via props 
+  let movieSeries = movieId.id === undefined ? 35 : movieId.id;
+
+
+  //console.log(movieId);
+  
+  useEffect(() => {
+    async function getVideo() {
+
+    await fetch((`https://api.themoviedb.org/3/${type}/${movieSeries}/videos?api_key=${import.meta.env.VITE_API_KEY}&language=en-US`), {
                 method: 'GET',
             })
-            .then( (res) => res.json())
+            .then( (res) => {
+              if (res.ok) {
+                return res.json();
+              } else {
+                throw new Error(res.message);
+              }
+            })
             .then((data) => {
             if (!data.errors) {
               //console.log(data);
@@ -62,17 +80,16 @@ export default function ContentModal( {children, movieId} ) {
             } else {
               setVideo([]);
             }
-          });
-  };
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  useEffect(() => {
+          })
+          .catch(error => {
+            console.error(error + "Catch of props passing undefined value in ContentModal");
+        })
+  }
       getVideo();
   }, []);
 
   //console.log(video);
+
 
   return (
     <div>
@@ -96,7 +113,6 @@ export default function ContentModal( {children, movieId} ) {
           {children && (
           <Box sx={style}>
             <Box className='modal-container'>
-              {/* <div className='modal-img-upright'> */}
                 {movieId?.poster_path ? (
                   <img
                     src={`${baseUrl}${movieId?.poster_path}`}
@@ -110,9 +126,7 @@ export default function ContentModal( {children, movieId} ) {
                     <h2>Sorry!</h2>
                   </div>
                 )}
-              {/* </div> */}
-              {/* <div className='modal-img-horizontally'> */}
-                {movieId.backdrop_path ? (
+                {movieId?.backdrop_path ? (
                   <img
                     src={`${baseUrl}${movieId?.backdrop_path}`}
                     alt={movieId?.title ||  movieId?.name}
@@ -125,7 +139,6 @@ export default function ContentModal( {children, movieId} ) {
                     <h2>Sorry!</h2>
                   </div>
                 )}
-              {/* </div> */}
 
               <div className='modal-main-content'>
                 <div>
