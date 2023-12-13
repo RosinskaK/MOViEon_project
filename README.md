@@ -1,7 +1,7 @@
-# <img src='./public/logoApp.png' alt="screenshot" width="60" height="auto" /> MOViEon app
+# <img src='./public/logoApp.png' alt="screenshot" width="70" height="auto" /> MOViEon app
 Great news! MOViEon is finally done!🎉🎊
 
-<!-- Project built in React.js 💙 -->
+Project built in React💙
 
 The MOViEon project is a movie website similar to streaming services like Netflix and SkyShowTime, it downloads data about movies and series from <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noreferrer" rel="noopener"> TheMovieDb API </a>, recommends film premieres and the most popular films and series rated by TMDB users.
 MOViEon allows user to store selected movies and series by adding them to the created My List. It allows to search for movies in the provided search engine. Has also a modal showing details of a given movie/series along with a link to the trailer on YouTube.
