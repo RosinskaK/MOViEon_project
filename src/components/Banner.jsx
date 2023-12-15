@@ -49,9 +49,11 @@ function Banner() {
 
     const mylistDisabled = storedMovie ? true : false;
 
+    //preventing calling url with undefined value for movie.bathdrop.path
+    let movieCheck = movie.backdrop_path === undefined ? "/9PqD3wSIjntyJDBzMNuxuKHwpUD.jpg" : movie.backdrop_path;
 
-    const image = movie?.backdrop_path === null;
-    //console.log(movie?.backdrop_path);
+    const image = movieCheck === null;
+    //console.log(movieCheck);
     //console.log(image);
 
 
@@ -61,7 +63,7 @@ function Banner() {
             backgroundSize: 'cover',
             backgroundImage: image ? ('linear-gradient(90deg, rgba(91, 77, 246, 1) 0%, rgba(255, 255, 255, 1) 100%)'
             ) : (
-            `url('http://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`),
+            `url('http://image.tmdb.org/t/p/original/${movieCheck}')`),
             backgroundPosition: 'top center',
         }}
     > 

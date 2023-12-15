@@ -6,7 +6,7 @@ const baseUrl = 'https://image.tmdb.org/t/p/w200/';
 function ModalCredits( { movieId }) {
     const [credits, setCredits] = useState();
 
-    const type = movieId?.release_date ? 'movie' : 'tv';
+    const type = movieId.title || movieId.original_title ? 'movie' : 'tv';
 
 
     const getCredits = async () => {

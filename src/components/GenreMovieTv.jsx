@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 function GenreMovieTv( {movieId} ) {
     const [genre, setGenre] = useState();
 
-    const type = movieId?.release_date ? 'movie' : 'tv';
+    const type = movieId.title || movieId.original_title ? 'movie' : 'tv';
 
     const getGenres = async () => {
 

@@ -21,7 +21,7 @@ function SingleCardSearch({ movie }) {
         {movie.poster_path ? (
           <img
             src={`${baseUrl}${movie.poster_path}`}
-            alt={movie.title ? movie.title : movie.name}
+            alt={movie.title || movie.original_title}
           />
         ) : (
           <div className="card-no-image">
@@ -30,11 +30,10 @@ function SingleCardSearch({ movie }) {
           </div>
         )}
       </div>
-      <h5 className="card-title">{movie.title ? movie.title : movie.name}</h5>
+      <h5 className="card-title">{movie.title || movie.original_title}</h5>
       <p className="card-description">
-        <span>{movie.release_date ? "Film" : "Serial"}</span> | {""}
-        {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : ""}
-        {movie.first_air_date ? `${movie.first_air_date?.slice(0, 4)}` : ""}
+        <span>{"Film"}</span> | {""}
+        {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : "--"}
       </p>
       <div className="card-search-btns-main">
         <button 

@@ -50,8 +50,8 @@ export default function ContentModal( { movieId, children } ) {
   const handleClose = () => setOpen(false);
 
 
-  const type = movieId?.release_date ? 'movie' : 'tv';
-  const type2 = movieId?.release_date ? 'Film' : 'Serial';
+  const type = movieId.title || movieId.original_title ? 'movie' : 'tv';       
+  const type2 = movieId.title || movieId.original_title ? 'Film' : 'Serial';  
 
 
   //preventing forwarding undefined value via props 
@@ -147,7 +147,7 @@ export default function ContentModal( { movieId, children } ) {
                   </h1>
                   <h4 className='modal-year'>
                     <span className='modal-year-type'>
-                      {type2}</span> z {(movieId?.release_date || movieId?.first_air_date || '---').substring(0,4)}
+                      {type2}</span> z {(movieId?.release_date || movieId?.first_air_date || '--').substring(0,4)}
                     <span className='modal-year-genres'><GenreMovieTv movieId={movieId}/> </span>
                   </h4>
                   <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
