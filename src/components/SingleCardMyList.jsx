@@ -26,7 +26,7 @@ function SingleCardMyList({ movie, type }) {
       </div>
       <h5 className="card-title">{movie.title ? movie.title : movie.name}</h5>
       <p className="card-description">
-        <span>{movie.release_date ? "Film" : "Serial"}</span> | {""}
+        <span>{movie.title ? "Film" : "Serial"}</span> | {""}
         {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : ""}
         {movie.first_air_date ? `${movie.first_air_date?.slice(0, 4)}` : ""}
       </p>

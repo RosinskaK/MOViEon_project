@@ -41,7 +41,7 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
         <div className={`single-image-hover ${isLargeRow && 'single-image-hoverLarge'}`}>
           <h3 className='image-hover-title'>{isFilm ? title : name} {isSerial ? name : ""}</h3>
           <p className='image-hover-type-date'>
-            <span>{release_date ? 'Film' : 'Serial'}</span> | {release_date ? `${release_date?.slice(0,4)}` : ""} 
+            <span>{title ? 'Film' : 'Serial'}</span> | {release_date ? `${release_date?.slice(0,4)}` : ""} 
             {first_air_date ? `${first_air_date?.slice(0,4)}` : ""}
             </p>
           <p className={`image-hover-overview ${isLargeRow && 'single-hover-overviewLarge'}`}>
