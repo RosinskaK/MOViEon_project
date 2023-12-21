@@ -32,52 +32,36 @@ function ModalCredits( { movieId }) {
     }, []);
 
 
-  return (
-    <div className='credits-container'>
-        {credits && 
-        <>
-            <div className='credits-person'>
-                {credits[0]?.profile_path ?
-                (<img 
-                    src={`${baseUrl}/${credits[0]?.profile_path}`}
-                    alt={credits[0]?.name}
-                    className='credits-img'
-                />
-                ) : (
-                    <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
-                )}
-                <h6 className='credits-actor-name'>{credits[0]?.name}</h6>
-            </div>
-
-            <div className='credits-person'>
-                {credits[1]?.profile_path ?
-                (<img 
-                    src={`${baseUrl}/${credits[1]?.profile_path}`}
-                    alt={credits[1]?.name}
-                    className='credits-img'
-                />   
-                ) : (
-                    <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
-                )}
-                <h6 className='credits-actor-name'>{credits[1]?.name}</h6>
-            </div>
-
-            <div className='credits-person'>
-                {credits[2]?.profile_path ?
-                (<img 
-                    src={`${baseUrl}/${credits[2]?.profile_path}`}
-                    alt={credits[2]?.name}
-                    className='credits-img'
-                />
-                ) : (
-                    <div className='credits-no-img'><p>Sorry! <br></br>no image</p></div>
-                )}
-                <h6 className='credits-actor-name'>{credits[2]?.name}</h6>
-            </div>
-        </>
-        }
-    </div>
-  );
+return (
+    <div className="credits-container">
+    {[...Array(3)].map((_, index) => (
+      <div key={index} className="credits-person">
+        {credits && credits[index] ? (
+          <>
+            {credits[index].profile_path ? (
+              <img
+                src={`${baseUrl}/${credits[index].profile_path}`}
+                alt={credits[index].name}
+                className="credits-img"
+              />
+            ) : (
+              <div className="credits-no-img">
+                <p>Sorry! <br />no image</p>
+              </div>
+            )}
+            <h6 className="credits-actor-name">{credits[index].name}</h6>
+          </>
+        ) : (
+          <div className="credits-no-img">
+            <p>Sorry! <br />no image</p>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+);
 }
 
 export default ModalCredits;
+
+  
