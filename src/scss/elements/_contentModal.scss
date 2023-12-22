@@ -7,8 +7,6 @@
     overflow-y: scroll;
     scrollbar-width: none;
 
-    flex-grow: 1;
-
     &::-webkit-scrollbar {
         display: none;
     }
@@ -99,6 +97,8 @@
     flex-direction: column;
     justify-content: space-between;
 
+    flex-grow: 1;  //gives max width to modal description
+
     @media screen and (max-width: 812px) {
         margin: 0;
     }
@@ -175,6 +175,7 @@
 }
 
 .modal-description-container {
+    
     background-color: $backgroundcolor-btns-navbar;
     margin-top: 1rem;
     margin-bottom: 1.3rem;
@@ -182,7 +183,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
 
-    flex-grow: 1;
+    flex-grow: 1;  //gives max height to modal description
 
     &::-webkit-scrollbar {
         display: none;
