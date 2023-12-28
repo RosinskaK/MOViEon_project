@@ -10,27 +10,24 @@ function Banner() {
     useEffect(() => {
 
         async function getData() {
-
-            await fetch((`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`), {
-                method: 'GET',
-            })
-                .then(res => {
-                    if (res.ok) {
-                        return res.json();
-                    } else {
-                        throw new Error(res.message);
-                    }
-                })
-                .then(data => {
-                    //console.log(data);
-                    setMovie(data?.results[Math.floor(Math.random() * data?.results.length -1)]);
-                })
-                .catch(error => {
-                    console.error(error);
-                })
+            
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`, {
+                    method: 'GET',
+                });
+    
+                if (response.ok) {
+                    const data = await response.json();
+                    setMovie(data?.results[Math.floor(Math.random() * data?.results.length - 1)]);
+                } else {
+                    throw new Error(response.statusText);
+                }
+            } catch (error) {
+                console.error(error);
+            }
         }
+    
         getData();
-
     }, []);
 
     //console.log(movie);
@@ -49,11 +46,8 @@ function Banner() {
 
     const mylistDisabled = storedMovie ? true : false;
 
-    //preventing calling url with undefined value for movie.bathdrop.path
-    let movieCheck = movie.backdrop_path === undefined ? "/9PqD3wSIjntyJDBzMNuxuKHwpUD.jpg" : movie.backdrop_path;
 
-    const image = movieCheck === null;
-    //console.log(movieCheck);
+    const image = movie.backdrop_path === undefined || null;
     //console.log(image);
 
 
@@ -61,9 +55,9 @@ function Banner() {
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: image ? ('linear-gradient(90deg, rgba(91, 77, 246, 1) 0%, rgba(255, 255, 255, 1) 100%)'
+            backgroundImage: image ? ('$main-app-color'
             ) : (
-            `url('http://image.tmdb.org/t/p/original/${movieCheck}')`),
+            `url('http://image.tmdb.org/t/p/original/${movie.backdrop_path}')`),
             backgroundPosition: 'top center',
         }}
     > 
