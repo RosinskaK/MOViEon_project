@@ -8,19 +8,21 @@ function GenreMovieTv( {movieId} ) {
     const type = movieId.title || movieId.original_title ? 'movie' : 'tv';
 
     const getGenres = async () => {
-
-        await fetch((`https://api.themoviedb.org/3/genre/${type}/list?api_key=${import.meta.env.VITE_API_KEY}`), {
+        try {
+            const response = await fetch((`https://api.themoviedb.org/3/genre/${type}/list?api_key=${import.meta.env.VITE_API_KEY}`), {
             method: 'GET',
-            })
-            .then( (res) => res.json())
-            .then((data) => {
+            });
+            const data = await response.json();
+    
             if (!data.errors) {
-                //console.log(data);
                 setGenre(data.genres);
             } else {
                 setGenre([]);
             }
-            });
+        } catch (error) {
+            console.error('An error occurred while retrieving genres:', error);
+            setGenre([]); 
+        }
     };
     //console.log(genre);
 

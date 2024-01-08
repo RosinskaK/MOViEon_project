@@ -10,21 +10,22 @@ function ModalCredits( { movieId }) {
 
 
     const getCredits = async () => {
-
-        await fetch((`https://api.themoviedb.org/3/${type}/${movieId.id}/credits?api_key=${import.meta.env.VITE_API_KEY}`), {
+      try {
+        const response =await fetch((`https://api.themoviedb.org/3/${type}/${movieId.id}/credits?api_key=${import.meta.env.VITE_API_KEY}`), {
             method: 'GET',
-            })
-            .then( (res) => res.json())
-            .then((data) => {
-            if (!data.errors) {
-                //console.log(data);
-                setCredits(data.cast);
-            } else {
-                setCredits([]);
-            }
             });
+            const data = await response.json();
+  
+            if (!data.errors) {
+              setCredits(data.cast);
+            } else {
+              setCredits([]);
+            }
+      } catch (error) {
+          console.error('Credits:', error);
+          setCredits([]);
+      }
     };
-
     //console.log(credits);
 
     useEffect(() => {
