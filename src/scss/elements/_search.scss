@@ -57,6 +57,23 @@
     }
 }
 
+.search-input-btn-clear {
+    cursor: pointer;
+    width: 40px;
+    height: 4.25rem;
+    padding: 0.6rem 1.5rem;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: $main-app-color;
+
+    font-size: 2rem;
+    line-height: 2.9rem;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+}
+
 .search-results-container {
     width: 86%;
     display: flex;
