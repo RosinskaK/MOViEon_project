@@ -45,10 +45,11 @@ function BarNavigation () {
     //console.log(window.location.pathname);
     const pathname = window.location.pathname;
     
-    const currentPage_1 = pathname === '/';
-    const currentPage_2 = pathname === '/mylist';
-    const currentPage_3 = pathname === '/search';
+    const paths = ['/', '/mylist', '/search'];
 
+    const currentPage = paths.map(path => pathname === path);
+
+    
     const color_1 = 'linear-gradient(233.25deg,#4d3fe9,#f13d30)';
     const color_2 = 'rgba(21, 21, 42, 0.3)';
 
@@ -59,14 +60,14 @@ function BarNavigation () {
                 <button 
                 onClick={handleNavigateHome} 
                 className="nav-left-icon nav-btns"
-                style={{ backgroundImage: currentPage_1 ? color_1 : color_2}}
+                style={{ backgroundImage: currentPage[0] ? color_1 : color_2}}
                 >
                     Strona główna
                 </button>
                 <button 
                 onClick={handleNavigateMyList} 
                 className="nav-left-icon nav-btns"
-                style={{ backgroundImage: currentPage_2 ? color_1 : color_2}}
+                style={{ backgroundImage: currentPage[1] ? color_1 : color_2}}
                 >
                     Moja lista
                 </button>
@@ -75,7 +76,7 @@ function BarNavigation () {
                 <button 
                 onClick={handleNavigateToSearch} 
                 className="nav-btn-search nav-btns"
-                style={{ backgroundImage: currentPage_3 ? color_1 : color_2}}
+                style={{ backgroundImage: currentPage[2] ? color_1 : color_2}}
                 >
                     {/* tu jest ikonka lupka */}
                     <svg xmlns="http://www.w3.org/2000/svg" height="17px" viewBox="0 0 512 512" style={{fill: 'white'}}>
