@@ -45,7 +45,7 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
             {first_air_date ? `${first_air_date?.slice(0,4)}` : ""}
             </p>
           <p className={`image-hover-overview ${isLargeRow && 'single-hover-overviewLarge'}`}>
-              {isLargeRow ? overview : truncate(overview, 90)}
+              {isLargeRow ? truncate(overview, 460) : truncate(overview, 90)}
             </p>
           <div className='btn-div-hover'>
             <button 
@@ -55,7 +55,7 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
             > + Moja lista
             </button>
             <ContentModal movieId={movie}>
-              <button className='image-hover-btn single-img-btn-three'>Więcej</button>
+              <button className='image-hover-btn'>Więcej</button>
             </ContentModal>
           </div>
         </div>

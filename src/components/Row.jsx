@@ -40,32 +40,37 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
-          breakpoint: { max: 3000, min: 1700 },
+          breakpoint: { max: 3000, min: 2100 },
+          items: 6,
+          partialVisibilityGutter: 30,
+          slidesToSlide: 2,
+        },
+        esktopL: {
+          breakpoint: { max: 2100, min: 1720 },
           items: 5,
           partialVisibilityGutter: 30,
           slidesToSlide: 2,
         },
-        largDesktop: {
-          breakpoint: { max: 1700, min: 1500 },
+        desktop: {
+          breakpoint: { max: 1720, min: 1375 },
           items: 4,
-          partialVisibilityGutter: 30,
+          partialVisibilityGutter: 20,
           slidesToSlide: 2,
         },
-        desktop: {
-          breakpoint: { max: 1500, min: 1050 },
-          items: 3,
-          partialVisibilityGutter: 30,
-        },
         tablet: {
-          breakpoint: { max: 1050, min: 700 },
+          breakpoint: { max: 1375, min: 1024 },
+          items: 3,
+          partialVisibilityGutter: 20,
+          slidesToSlide: 2,
+        },
+        tabletS: {
+          breakpoint: { max: 1024, min: 645 },
           items: 2,
-          partialVisibilityGutter: 60,
         },
         mobile: {
-          breakpoint: { max: 700, min: 0 },
-          items: 1,
-          partialVisibilityGutter: 100,
-        }
+            breakpoint: { max: 645, min: 0 },
+            items: 1,
+          }
       };
 
 

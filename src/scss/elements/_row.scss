@@ -1,12 +1,19 @@
 .row-container {
     width: 100%;
-    margin-left: 20px;
     padding-top: 0.7rem;
 }
 
 .row-title {
     text-shadow: 1px 1px 2px black;
-    //padding-left: 7px;
+    margin-left: 10px;
+
+    @media only screen and (width > 420px) and (width <= 645px) {
+        font-size: 1.2rem;
+    }
+
+    @media screen and (width <= 420px) {
+        font-size: 1rem;
+    }
 }
 
 
