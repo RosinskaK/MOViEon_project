@@ -10,10 +10,18 @@
 .banner-contents {
     margin-left: 30px;
     padding-top: 240px;
-   // height: 190px;
 
    @media screen and (min-width: 1600px) {
-    padding-top: 540px;
+        padding-top: 540px;
+    }
+
+    @media screen and (width > 520px) and (width <= 750px) {
+        padding-top: 262px;
+    }
+
+    @media screen and (max-width: 520px) {
+       margin-left: 10px;
+       padding-top: 277px;
     }
 }
 
@@ -23,14 +31,16 @@
     padding-bottom: 0.3rem;
     text-shadow: 1px 1px 5px black;
 
+    @media screen and (width > 520px) and (width <= 750px) {
+        font-size: 2.1rem;
+    }
+
     @media screen and (max-width: 520px) {
         font-size: 1.5rem;
-        padding-bottom: 20px;
     }
 }
 
 .banner-description {
-    width: 45rem;
     line-height: 1.3rem;
     padding-top: 1rem;
     font-size: 0.9rem;
@@ -38,6 +48,12 @@
     max-width: 360px;
     height: 150px;
     text-shadow: 1px 1px 6px black;
+
+    @media screen and (max-width: 380px) {
+        padding-right: 10px;
+        max-width: 290px;
+        font-size: 0.85rem;
+    }
 }
 
 .banner-btns {
@@ -54,7 +70,6 @@
     font-size: 0.9rem;
     line-height: 1rem;
     font-weight: 400;
-    //border-radius: 0.2vw;
     padding-left: 2rem;
     padding-right: 2rem;
     margin-right: 1rem;
@@ -63,22 +78,17 @@
     padding-bottom: 0.6rem;
     border-radius: 30px;
     transition: all 0.7s;
-    //border: 2px solid transparent;
 
     &:hover {
-        // border-radius: 30px;
-        // border-width: 2px;
-        // border-style: solid;
         background: linear-gradient(233.25deg,#5b4df6,#ff493b); //1;
     }
     &:disabled {
         background: transparent;
         background-color: $btn-disabled-backgroundcolor;
-        //rgba(148, 146, 146, 0.716)
     }
 }
 
 .banner-fadeBottom {
     height: 8rem;
-    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.41), $main-app-color);    
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.41), $main-app-color);  
 }
