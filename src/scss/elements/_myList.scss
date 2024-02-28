@@ -8,12 +8,12 @@
 }
 
 .mylist-lettering {
-    width: 90%;
+    width: 100%;
     text-align: center;
     padding-top: 7.6rem;
     padding-bottom: 3rem;   
 
-        h1 {
+    h1 {
         padding-bottom: 2rem;
     }
 }
@@ -36,7 +36,7 @@
 }
 
 .mylist-main-container {
-    width: 90%;
+    width: 95%;
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -47,13 +47,12 @@
     padding-bottom: 2rem;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .mylist-empty-list {
     width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 40px 10px;
     text-align: center;
 }
