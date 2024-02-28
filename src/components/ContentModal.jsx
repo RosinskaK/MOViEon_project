@@ -25,7 +25,7 @@ const style = {
   //border: '1px solid #000',
   boxShadow: 24,
   color: 'whitesmoke',
-  p: 4,
+  p: 3,
   borderRadius: '15px',
 };
 
@@ -111,7 +111,7 @@ export default function ContentModal( { movieId, children } ) {
       >
         <Fade in={open}>
           {children && (
-          <Box sx={style}>
+          <Box sx={style} >
             <Box className='modal-container'>
                 {movieId?.poster_path ? (
                   <img

@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     
-    @media screen and (max-width: 812px) {
+    @media screen and (max-width: 870px) {
         flex-direction: row;
         margin-top: 15px;
         justify-content: space-between;
@@ -38,7 +38,7 @@
         -webkit-text-fill-color: transparent;
     }
     
-    @media screen and (max-width: 812px) {
+    @media screen and (max-width: 400px) {
         height: 105px;
         max-width: 70px;
     }
@@ -48,7 +48,7 @@
     max-width: 90px;
     border-radius: 5px;
 
-    @media screen and (max-width: 812px) {
+    @media screen and (max-width: 400px) {
         max-width: 70px;
     }
 }
@@ -60,7 +60,7 @@
     padding-top: 3px;
     line-height: 14px;
 
-    @media screen and (max-width: 812px) {
+    @media screen and (max-width: 400px) {
         font-size: 9px;
         max-width: 70px;
         line-height: 12px;
