@@ -20,7 +20,7 @@ function Footer() {
                 </div>
             </div>
             <div className='footer-descriptions'>
-                <div>This web application uses the TMDB API but is not endorsed or certified by TMDB.</div>
+                <p>This web application uses the TMDB API but is not endorsed or certified by TMDB.</p>
             </div>
             <div className='footer-socialIcons'>
                 <IconFacebook />
