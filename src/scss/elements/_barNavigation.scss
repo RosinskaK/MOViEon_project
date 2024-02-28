@@ -2,17 +2,20 @@
     position: fixed;  //
     top: 0;           // thanks to this, it overlaps the banner
     width: 100vw;
+    height: 130px;
     display: flex;
     justify-content: space-between;
     padding: 0.7rem 1.5rem;
-
-    height: 130px;
     z-index: 1;
-
     transition-timing-function: ease-in;
     transition: all 0.5s;
-}
 
+    @media screen and (width <= 720px) {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 0; 
+    }
+}
 
 //bar that appears when scrolling down the page
 .nav-black {
@@ -22,10 +25,8 @@
 
 .nav-logo {
     margin-right: 1rem;
-
     font-size: 2.2rem;
     font-style: italic;
-
     text-shadow: 1px 1px 2px black;
 
     span {
@@ -45,7 +46,14 @@
 .nav-left-icons {
     display: flex;
     flex-wrap: wrap;
+
+    button {
+        @media screen and (width <= 720px) {
+            display: none;
+        }
+    }
 }
+
 
 .nav-left-icon {
     margin-left: 1rem;
@@ -58,6 +66,10 @@
 .nav-right-icons {
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (width <= 720px) {
+        display: none;
+    }
 }
 
 //-------------- animation for Hello -----------------------
@@ -87,34 +99,26 @@
 
 .nav-btns {
     font-family: 'Poppins', sans-serif;
-
     height: 2.2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 0.35rem;
     padding-bottom: 0.6rem;
-
     cursor: pointer;
     outline: none;
     border: none;
-
     color: whitesmoke;
     font-size: 1rem;
     font-weight: 600;
-    //border-radius: 0.2vw;
-
     margin-top: 0.5rem;
 
     background-color: rgba(21, 21, 42, 0.3);
     
     border-radius: 30px;
     transition: all 0.7s;
-    //border: 2px solid transparent;
     
     &:hover {
-        // border-radius: 30px;
-        // border-width: 2px;
-        // border-style: solid;
+       
         background-image: linear-gradient(233.25deg,#4d3fe9,#f13d30); //1;
         color: white;
     }

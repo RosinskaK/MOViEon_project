@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from "react-router-dom";
+import HamburgerMenu from './HamburgerMenu';
 
 
 function BarNavigation () {
@@ -85,6 +86,7 @@ function BarNavigation () {
                 </button>
                 <h3 className="nav-hello">Hello!</h3>
             </div>
+            <HamburgerMenu />
         </div>
     );
 }

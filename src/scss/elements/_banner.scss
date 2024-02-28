@@ -15,11 +15,12 @@
         padding-top: 540px;
     }
 
-    @media screen and (width > 520px) and (width <= 750px) {
+    @media screen and (width > 650px) and (width <= 1000px) {
         padding-top: 262px;
+        margin-left: 10px;
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 650px) {
        margin-left: 10px;
        padding-top: 277px;
     }
@@ -31,11 +32,11 @@
     padding-bottom: 0.3rem;
     text-shadow: 1px 1px 5px black;
 
-    @media screen and (width > 520px) and (width <= 750px) {
+    @media screen and (width > 650px) and (width <= 1000px) {
         font-size: 2.1rem;
     }
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 650px) {
         font-size: 1.5rem;
     }
 }

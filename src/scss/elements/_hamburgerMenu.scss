@@ -1,0 +1,111 @@
+.hamburger-menu {
+  position: relative;
+  height: 30px;
+
+  display: none;
+
+  @media screen and (width < 720px) {
+    display: block;
+  }
+}
+
+.hamburger-menu {
+  li {
+    list-style: none;
+    margin-left: 10px;
+  }
+}
+
+.menu-items__link {
+  text-decoration: none;
+  color: #1b435e;
+  background: -webkit-linear-gradient(233.25deg,#5b4df6,#ff493b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.8rem;
+}
+
+.hamburger-menu {
+  .checkbox-hm {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 10px;    //height of checkbox important!!!! with this hamburger icon works 
+    right: 20px;
+    z-index: 1000;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.hamburger-menu .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-menu .hamburger-lines .hamburger-lines__line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  border: 1px solid black;
+}
+
+.hamburger-menu .hamburger-lines .hamburger-lines--line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hamburger-menu .hamburger-lines .hamburger-lines--line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-menu .hamburger-lines .hamburger-lines--line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hamburger__menu-items {
+  padding-top: 100px;
+  background-color: rgba(245, 245, 245, 0.895);
+  height: 100vh;
+  width: 200px;
+  transform: translate(0%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  top: 0;
+  position: fixed;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  box-shadow: -3px 2px 6px rgba(0, 0, 0, .4);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger__menu-items {
+  transform: translateX(-100%);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .hamburger-lines--line1 {
+  transform: rotate(45deg);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .hamburger-lines--line2 {
+  transform: scaleY(0);
+}
+
+.hamburger-menu input[type="checkbox"]:checked ~ .hamburger-lines .hamburger-lines--line3 {
+  transform: rotate(-45deg);
+}
