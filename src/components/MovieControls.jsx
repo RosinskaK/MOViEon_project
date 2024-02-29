@@ -5,7 +5,7 @@ import ContentModal from './ContentModal';
 //scss classes for MovieControls are in _singleCardSearch.scss
 
 
-function MovieControls({ movie, type }) {
+function MovieControls({ movie }) {
 
     const {removeMovieFromMylist} = useContext(GlobalContext);
 
@@ -14,7 +14,7 @@ function MovieControls({ movie, type }) {
     <div className='moviecontrols-main'>
         <button
         className='moviecontrols-btn'
-        onClick={() => removeMovieFromMylist(movie.id)}
+        onClick={() => removeMovieFromMylist(movie?.id)}
         >
           - Moja lista
         </button >

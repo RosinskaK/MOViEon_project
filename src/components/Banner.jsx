@@ -42,12 +42,12 @@ function Banner() {
 
     const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
-    let storedMovie = mylist.find(o => o.id === movie?.id);
+    let storedMovie = mylist.some(o => o.id === movie?.id && movie?.id !== undefined);
 
-    const mylistDisabled = storedMovie ? true : false;
+    const mylistDisabled = storedMovie ? true : (movie?.id === undefined) ? true : false;
 
 
-    const image = movie.backdrop_path === undefined || null;
+    const image = movie?.backdrop_path !== undefined && movie?.backdrop_path !== null;
     //console.log(image);
 
 
@@ -55,9 +55,9 @@ function Banner() {
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: image ? ('$main-app-color'
+            backgroundImage: image ? (`url('http://image.tmdb.org/t/p/original/${movie.backdrop_path}')`
             ) : (
-            `url('http://image.tmdb.org/t/p/original/${movie.backdrop_path}')`),
+            '$main-app-color'),
             backgroundPosition: 'top center',
         }}
     > 

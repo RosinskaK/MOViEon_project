@@ -10,18 +10,18 @@ function SingleCardSearch({ movie }) {
   
   const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
-  let storedMovie = mylist.find(o => o.id === movie.id);
+  let storedMovie = mylist.some(o => o.id === movie?.id && movie?.id !== undefined);
 
-  const mylistDisabled = storedMovie ? true : false;
+  const mylistDisabled = storedMovie ? true : (movie?.id === undefined) ? true : false;
 
 
   return (
     <div className="card-main">
       <div className="card-image">
-        {movie.poster_path ? (
+        {movie?.poster_path ? (
           <img
             src={`${baseUrl}${movie.poster_path}`}
-            alt={movie.title || movie.original_title}
+            alt={movie?.title || movie?.original_title}
           />
         ) : (
           <div className="card-no-image">
@@ -33,7 +33,7 @@ function SingleCardSearch({ movie }) {
       <h5 className="card-title">{movie.title || movie.original_title}</h5>
       <p className="card-description">
         <span>{"Film"}</span> | {""}
-        {movie.release_date ? `${movie.release_date?.slice(0, 4)}` : "--"}
+        {movie?.release_date ? `${movie.release_date?.slice(0, 4)}` : "--"}
       </p>
       <div className="card-search-btns-main">
         <button 

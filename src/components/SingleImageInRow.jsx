@@ -15,9 +15,9 @@ function SingleImageInRow( {title, poster_path, backdrop_path, isLargeRow, name,
 
   const { addMovieToMylist, mylist } = useContext(GlobalContext);
 
-  let storedMovie = mylist.find(o => o.id === movie.id);
+  let storedMovie = mylist.some(o => o.id === movie?.id && movie?.id !== undefined);
 
-  const mylistDisabled = storedMovie ? true : false;
+  const mylistDisabled = storedMovie ? true : (movie?.id === undefined) ? true : false;
 
 
   return (

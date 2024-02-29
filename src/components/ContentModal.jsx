@@ -50,12 +50,12 @@ export default function ContentModal( { movieId, children } ) {
   const handleClose = () => setOpen(false);
 
 
-  const type = movieId.title || movieId.original_title ? 'movie' : 'tv';       
-  const type2 = movieId.title || movieId.original_title ? 'Film' : 'Serial';  
+  const type = movieId?.title || movieId?.original_title ? 'movie' : 'tv';       
+  const type2 = movieId?.title || movieId?.original_title ? 'Film' : 'Serial';  
 
 
   //preventing forwarding undefined value via props 
-  let movieSeries = movieId.id === undefined ? 35 : movieId.id;
+  let movieSeries = movieId?.id === undefined ? 35 : movieId?.id;
 
 
   //console.log(movieId);
@@ -118,7 +118,7 @@ export default function ContentModal( { movieId, children } ) {
                     src={`${baseUrl}${movieId?.poster_path}`}
                     alt={movieId?.title ||  movieId?.name}
                     className='modal-img-upright'
-                    style={{borderRadius: '7px'}}
+                    style={{borderRadius: '9px'}}
                   />
                   ) : (
                   <div className="modal-no-image-upright">
@@ -131,7 +131,7 @@ export default function ContentModal( { movieId, children } ) {
                     src={`${baseUrl}${movieId?.backdrop_path}`}
                     alt={movieId?.title ||  movieId?.name}
                     className='modal-img-horizontally'
-                    style={{borderRadius: '7px'}}
+                    style={{borderRadius: '9px'}}
                   />
                   ) : (
                   <div className="modal-no-image-horizontally">
@@ -143,18 +143,21 @@ export default function ContentModal( { movieId, children } ) {
               <div className='modal-main-content'>
                 <div>
                   <h1 className='modal-main-title'>
-                    {movieId.title || movieId.name || movieId.original_title}
+                    {movieId?.title || movieId?.name || movieId?.original_title}
                   </h1>
                   <h4 className='modal-year'>
                     <span className='modal-year-type'>
                       {type2}</span> z {(movieId?.release_date || movieId?.first_air_date || '--').substring(0,4)}
                     <span className='modal-year-genres'><GenreMovieTv movieId={movieId}/> </span>
                   </h4>
-                  <h5 className='modal-votes'> ocena <span>{movieId.vote_average?.toFixed(1)}</span>/10 w TMDB</h5>
+                  <h5 className='modal-votes'> ocena <span>
+                      {movieId?.vote_average !== undefined && movieId?.vote_average !== null ? movieId.vote_average.toFixed(1) : ''}
+                    </span>
+                  /10 w TMDB</h5>
                 </div>
                 <div className='modal-description-container'>
                   <h5 className='modal-description'>
-                    {movieId?.overview !== '' ? movieId.overview : 'Sorry, there is no description...'}
+                    {movieId?.overview !== '' && movieId?.overview !== undefined ? movieId.overview : 'Sorry, there is no description...'}
                   </h5>
                 </div>
                 <Button
