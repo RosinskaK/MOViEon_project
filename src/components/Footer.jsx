@@ -23,9 +23,9 @@ function Footer() {
                 <p>This web application uses the TMDB API but is not endorsed or certified by TMDB.</p>
             </div>
             <div className='footer-socialIcons'>
-                <IconFacebook />
-                <IconInstagram />
-                <IconTikTok />
+                <a href="https://github.com/RosinskaK" target="_blank" title="RosinskaK GitHub"><IconFacebook /></a>
+                <a href="https://www.themoviedb.org/?language=pl" target="_blank" title="TheMovieDataBase"><IconInstagram /></a>
+                <a href="https://www.linkedin.com/in/katarzyna-rosinska/" target="_blank" title="LinkedIn"><IconTikTok /></a>
             </div>
         </div>
         <div className='footer-copyright'>Created by <span>&copy;Kasia Rosińska</span></div>
