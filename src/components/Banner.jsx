@@ -18,7 +18,7 @@ function Banner() {
     
                 if (response.ok) {
                     const data = await response.json();
-                    setMovie(data?.results[Math.floor(Math.random() * data?.results.length - 1)]);
+                    setMovie(data?.results[Math.floor(Math.random() * data?.results.length)]);
                 } else {
                     throw new Error(response.statusText);
                 }
@@ -55,7 +55,7 @@ function Banner() {
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: image ? (`url('http://image.tmdb.org/t/p/original/${movie.backdrop_path}')`
+            backgroundImage: image ? (`url('http://image.tmdb.org/t/p/original${movie.backdrop_path}')`
             ) : (
             '$main-app-color'),
             backgroundPosition: 'top center',

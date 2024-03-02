@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-const baseUrl = 'https://image.tmdb.org/t/p/w200/';
+const baseUrl = 'https://image.tmdb.org/t/p/w200';
 
 function ModalCredits( { movieId }) {
     const [credits, setCredits] = useState();
@@ -41,7 +41,7 @@ return (
           <>
             {credits[index]?.profile_path ? (
               <img
-                src={`${baseUrl}/${credits[index].profile_path}`}
+                src={`${baseUrl}${credits[index].profile_path}`}
                 alt={credits[index]?.name}
                 className="credits-img"
               />

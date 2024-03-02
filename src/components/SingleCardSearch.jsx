@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 import ContentModal from "./ContentModal";
 
 
-const baseUrl = "http://image.tmdb.org/t/p/original/";
+const baseUrl = "http://image.tmdb.org/t/p/original";
 
 
 function SingleCardSearch({ movie }) {

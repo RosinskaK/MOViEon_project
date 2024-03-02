@@ -3,7 +3,7 @@ import { GlobalContext } from "../context/GlobalState";
 import ContentModal from './ContentModal';
 
 
-const baseUrl = 'http://image.tmdb.org/t/p/original/';
+const baseUrl = 'http://image.tmdb.org/t/p/original';
 
 // limiting the amount of text in a div to n characters - see below
 function truncate(str, n) {
