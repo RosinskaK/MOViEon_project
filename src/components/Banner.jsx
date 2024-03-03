@@ -55,7 +55,7 @@ function Banner() {
     <header className='banner'
         style={{
             backgroundSize: 'cover',
-            backgroundImage: image ? (`url('http://image.tmdb.org/t/p/original${movie.backdrop_path}')`
+            backgroundImage: image ? (`url('https://image.tmdb.org/t/p/original${movie.backdrop_path}')`
             ) : (
             '$main-app-color'),
             backgroundPosition: 'top center',

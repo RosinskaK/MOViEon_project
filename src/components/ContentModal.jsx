@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 
-const baseUrl = "http://image.tmdb.org/t/p/original";
+const baseUrl = "https://image.tmdb.org/t/p/original";
 
 
 //styles for ContentModal

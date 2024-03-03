@@ -3,7 +3,7 @@ import MovieControls from './MovieControls';
 
 //scss classes for SingleCardMyList are in _singleCardSearch.scss
 
-const baseUrl = "http://image.tmdb.org/t/p/original";
+const baseUrl = "https://image.tmdb.org/t/p/original";
 
 
 function SingleCardMyList({ movie }) {
