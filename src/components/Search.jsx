@@ -58,6 +58,7 @@ function Search() {
                 x
               </button>
             )}
+            
           </div>
           <div className='search-results-container'>
             {results.length > 0 ? (

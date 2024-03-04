@@ -43,7 +43,7 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
           breakpoint: { max: 3000, min: 2100 },
           items: 6,
           partialVisibilityGutter: 30,
-          slidesToSlide: 2,
+          slidesToSlide: 3,
         },
         esktopL: {
           breakpoint: { max: 2100, min: 1720 },
@@ -100,6 +100,7 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
             <Carousel 
                 responsive={responsive}
                 partialVisible={true}
+                removeArrowOnDeviceType={["mobile"]}
                 >
                 {
                     singleImage
