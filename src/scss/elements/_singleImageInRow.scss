@@ -150,7 +150,7 @@
     background: rgba(26, 42, 78, 0.668);
     backdrop-filter: blur(2px);
     border-radius: 12px;
-    transition: 1s;
+    transition-duration: 1s;
 
     padding: 10px;
     display: flex;
@@ -169,7 +169,7 @@
     background: rgba(26, 42, 78, 0.668);
     backdrop-filter: blur(2px);
     border-radius: 20px;
-    transition: 1;
+    transition-duration: 1s;
 
     padding: 17px;
     display: flex;
@@ -198,8 +198,8 @@
 
 .image-hover-overview {
     font-weight: 400;
-    font-size: 12.5px;
-    line-height: 16.5px;
+    font-size: 13px;
+    line-height: 16px;
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: justify;
@@ -207,7 +207,8 @@
 
 .single-hover-overviewLarge {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 19px;
     margin-top: 10px;
     margin-bottom: 15px;
     text-align: justify;
