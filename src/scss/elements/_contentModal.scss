@@ -55,12 +55,41 @@
 
     h2 {
         margin-bottom: 20px;
-        margin-left: 110px;
-        margin-right: 110px;
+        margin-left: 120px;
+        margin-right: 120px;
     }
 
     @media screen and (max-width: 870px) {
         display: none;
+    }
+
+    @media screen and (width >= 1900px) {
+        max-width: 450px;
+
+        p {
+            font-size: 1.2rem;
+        }
+    
+        h2 {
+            font-size: 2rem;
+            margin: 0;
+            padding: 0 170px;
+        }
+    }
+ 
+     @media screen and (width >= 2450px) {
+         max-width: 600px;
+
+        p {
+            font-size: 1.7rem;
+        }
+    
+        h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            padding: 0 200px;
+            
+        }
     }
 }
 

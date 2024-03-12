@@ -25,15 +25,15 @@
     width: 100%;
     min-width: 300px;
     border-radius: 12px;
-    margin-right: 9px;
-    margin-left: 9px;
+    margin-right: 10px;
+    margin-left: 10px;
     
     transition: transform 450ms;
     overflow: hidden;
     position: relative;  //!!!!!!!!!!!!!!!!!!!
 
     &:hover {
-        transform: scale(1.06);
+        transform: scale(1.035);
     }
 
     @media screen and (width <= 645px) {
@@ -227,5 +227,4 @@
         background-color: $btn-disabled-backgroundcolor;
         //rgba(148, 146, 146, 0.716)
     }
-    
 }
