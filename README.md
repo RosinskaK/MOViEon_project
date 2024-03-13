@@ -10,6 +10,7 @@ MOViEon allows user to store selected movies and series by adding them to the cr
 
 MOViEon has a mobile version 📱 !!
 
+
 ## Screenshots
 
 <div align="center"> 
@@ -23,6 +24,7 @@ MOViEon has a mobile version 📱 !!
   <img src="./public/mylist3.png" alt="screenshot" width="405" height="auto"/>
   <img src="./public/search1.png" alt="screenshot" />
   <img src="./public/search2.png" alt="screenshot" />
+  <img src="./public/mobile1.png" alt="screenshot" />
 </div>
 
 
