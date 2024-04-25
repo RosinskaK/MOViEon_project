@@ -14,13 +14,13 @@ function App() {
     <GlobalProvider>
     <Router>
       <Routes>
-        <Route path={'/'} element={<Home />} />
-        <Route path={'/search'} element={<Search />} />
-        <Route path={'/mylist'} element={<MyList />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/mylist' element={<MyList />} />
       </Routes>
     </Router>
     </GlobalProvider>
   );
 }
 
-export default App
+export default App;

@@ -48,29 +48,29 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
         esktopL: {
           breakpoint: { max: 2100, min: 1720 },
           items: 5,
-          partialVisibilityGutter: 20,
+          partialVisibilityGutter: 30,
           slidesToSlide: 2,
         },
         desktop: {
           breakpoint: { max: 1720, min: 1375 },
           items: 4,
-          partialVisibilityGutter: 20,
+          partialVisibilityGutter: 30,
           slidesToSlide: 2,
         },
         tablet: {
-          breakpoint: { max: 1375, min: 1024 },
+          breakpoint: { max: 1375, min: 1050 },
           items: 3,
-          partialVisibilityGutter: 20,
+          partialVisibilityGutter: 35,
           slidesToSlide: 2,
         },
         tabletS: {
-          breakpoint: { max: 1024, min: 645 },
+          breakpoint: { max: 1050, min: 645 },
           items: 2,
         },
         mobile: {
             breakpoint: { max: 645, min: 0 },
             items: 1,
-          }
+        }
       };
 
 

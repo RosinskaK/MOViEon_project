@@ -25,8 +25,8 @@
     width: 100%;
     min-width: 300px;
     border-radius: 12px;
-    margin-right: 10px;
-    margin-left: 10px;
+    
+    margin: 0 10px;
     
     transition: transform 450ms;
     overflow: hidden;
@@ -37,38 +37,19 @@
     }
 
     @media screen and (width <= 645px) {
+         margin: 0 15px;
 
         &:hover {
             transform: none;
         }
     }
 
-    @media only screen and (width >= 2300px) and (width <= 3000px) {
-        margin: 0 20px;
+    @media only screen and (width >= 430px) and (width <= 645px) {
+        margin: 0 50px;
     }
 
-    @media only screen and (width >= 1465px) and (width <= 1720px) {
-        margin: 0 17px;
-    }
-
-    @media only screen and (width >= 1285px) and (width <= 1375px) {
-        margin: 0 17px;
-    }
-
-    @media only screen and (width >= 850px) and (width <= 1024px) {
-        margin: 0 20px;
-    }
-
-    @media only screen and (width >= 380px) and (width <= 645px) {
+    @media only screen and (width >= 900px) and (width <= 1051px) {
         margin: 0 30px;
-    }
-
-    @media only screen and (width >= 360px) and (width <= 380px) {
-        margin: 0 20px;
-    }
-
-    @media screen and (width < 360px) {
-        margin: 0 10px;
     }
 }
 
@@ -107,7 +88,11 @@
         margin: 0 20px;
     }
 
-    @media only screen and (width >= 850px) and (width <= 1024px) {
+     @media only screen and (width >= 921px) and (width <= 1051px) {
+        margin: 0 60px;
+    }
+
+    @media only screen and (width >= 850px) and (width <= 920px) {
         margin: 0 30px;
     }
 
