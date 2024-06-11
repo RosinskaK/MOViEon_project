@@ -183,20 +183,26 @@
 
 .image-hover-overview {
     font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     text-align: justify;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
 
 .single-hover-overviewLarge {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 15px;
+    line-height: 22px;
     margin-top: 10px;
     margin-bottom: 15px;
     text-align: justify;
+    display: block;
 }
 
 .btn-div-hover {
