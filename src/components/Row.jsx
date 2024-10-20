@@ -34,7 +34,7 @@ function Row ( { title, fetchUrl, isLargeRow, isFilm, isSerial } ) {
     }, [fetchUrl]);
 
 
-    //console.log(movies);
+    console.log(movies);
 
 //carousel settings
     const responsive = {
