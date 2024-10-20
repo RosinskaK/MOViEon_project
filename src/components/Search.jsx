@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import BarNavigation from './BarNavigation';
 import SingleCardSearch from './SingleCardSearch';
 import Footer from './Footer';
